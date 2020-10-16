@@ -1,0 +1,31 @@
+$vertical-spacing: 150px;
+$vertical-padding: 30px;
+
+nav.nav-header {
+  width: 100%;
+  // height: 60px;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+
+  ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    li.nav-item {
+      height: 100%;
+      a.nav-link {
+        display: inline-block;
+        height: 100%;
+        transition: background-color .3s;
+        padding: 20px;
+        &:hover {
+          background-color: $col-brand-bg;
+        }
+      }
+    }
+  }
+}

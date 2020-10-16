@@ -88,6 +88,10 @@ p {
   font-weight: 200;
   line-height: 1.8; }
 
+a {
+  text-decoration: none;
+  color: #007bc0; }
+
 section.spaced {
   margin-top: 150px;
   margin-bottom: 150px; }
@@ -139,3 +143,25 @@ img.avatar {
   border-radius: 50%;
   width: 50px;
   height: 50px; }
+
+nav.nav-header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  top: 0; }
+  nav.nav-header ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    nav.nav-header ul li.nav-item {
+      height: 100%; }
+      nav.nav-header ul li.nav-item a.nav-link {
+        display: inline-block;
+        height: 100%;
+        transition: background-color .3s;
+        padding: 20px; }
+        nav.nav-header ul li.nav-item a.nav-link:hover {
+          background-color: #ecf5f9; }
