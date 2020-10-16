@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
-@font-face {
-  font-family: "Jasper Daniels";
-  src: url("/JasperDaniels.woff2") format("woff2"),
-    url("/JasperDaniels.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Source%20Sans%20Pro:wght@400;700&display=swap");
 
 // variable for later use
-$font-family: "Merriweather", serif;
+$font-family: "Source Sans Pro", serif;
 $font-height: 1.5;

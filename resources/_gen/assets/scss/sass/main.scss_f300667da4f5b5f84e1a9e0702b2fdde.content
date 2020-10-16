@@ -1,11 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
-@font-face {
-  font-family: "Jasper Daniels";
-  src: url("/JasperDaniels.woff2") format("woff2"), url("/JasperDaniels.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
+@import url("https://fonts.googleapis.com/css2?family=Source%20Sans%20Pro:wght@400;700&display=swap");
 html,
 body {
   height: 100%;
@@ -15,120 +9,44 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background: #fafbfb; }
+  background: #fafbfb;
+  color: #2d2d2a; }
 
 * {
   box-sizing: border-box;
-  font-family: "Merriweather", serif;
-  line-height: 1.5;
-  color: #2d2d2a; }
+  font-family: "Source Sans Pro", serif;
+  line-height: 1.5; }
 
 .hidden-sm {
   display: none; }
 
-.container {
+section {
+  width: 100%; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
   width: 90%;
   margin-left: auto;
   margin-right: auto; }
-  @media only screen and (min-width: 33.75em) {
-    .container {
+  @media only screen and (min-width: 540px) {
+    .row {
       width: 80%; } }
-  @media only screen and (min-width: 60em) {
-    .container {
+  @media only screen and (min-width: 1280px) {
+    .row {
       width: 75%;
-      max-width: 60rem; } }
+      max-width: 1280px; } }
+  .row .col {
+    flex: 1 1;
+    padding: 0 5px; }
 
-.row {
-  position: relative;
-  width: 100%; }
-
-.row [class^="col"] {
-  float: left;
-  margin: 0.5rem 2%;
-  min-height: 0.125rem; }
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  width: 96%; }
-
-.col-1-sm {
-  width: 4.33333333%; }
-
-.col-2-sm {
-  width: 12.66666667%; }
-
-.col-3-sm {
-  width: 21%; }
-
-.col-4-sm {
-  width: 29.33333333%; }
-
-.col-5-sm {
-  width: 37.66666667%; }
-
-.col-6-sm {
-  width: 46%; }
-
-.col-7-sm {
-  width: 54.33333333%; }
-
-.col-8-sm {
-  width: 62.66666667%; }
-
-.col-9-sm {
-  width: 71%; }
-
-.col-10-sm {
-  width: 79.33333333%; }
-
-.col-11-sm {
-  width: 87.66666667%; }
-
-.col-12-sm {
-  width: 96%; }
-
-@media only screen and (min-width: 45em) {
-  .col-1 {
-    width: 4.33333333%; }
-  .col-2 {
-    width: 12.66666667%; }
-  .col-3 {
-    width: 21%; }
-  .col-4 {
-    width: 29.33333333%; }
-  .col-5 {
-    width: 37.66666667%; }
-  .col-6 {
-    width: 46%; }
-  .col-7 {
-    width: 54.33333333%; }
-  .col-8 {
-    width: 62.66666667%; }
-  .col-9 {
-    width: 71%; }
-  .col-10 {
-    width: 79.33333333%; }
-  .col-11 {
-    width: 87.66666667%; }
-  .col-12 {
-    width: 96%; }
-  .hidden-sm {
-    display: block; } }
+@media only screen and (max-width: 960px) {
+  .row {
+    flex-wrap: wrap; }
+    .row .col {
+      flex-basis: 100%; }
+      .row .col.wrap-last {
+        order: 99; } }
 
 h1 {
   font-size: 2.5rem; }
@@ -162,7 +80,62 @@ h6 {
 .justify {
   text-align: justify; }
 
+.larger {
+  font-size: larger; }
+
 p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8; }
+
+section.spaced {
+  margin-top: 150px;
+  margin-bottom: 150px; }
+
+section.dark {
+  background-color: #4a4a4a;
+  color: #e8e9eb; }
+
+.row.padded {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .logo-grid > * {
+    padding: 10px;
+    width: 200px; }
+
+p.quote {
+  position: relative; }
+  p.quote:before {
+    display: block;
+    position: absolute;
+    font-size: 10em;
+    content: "\201C";
+    color: rgba(0, 123, 192, 0.1);
+    top: 0;
+    left: -30px;
+    line-height: 1em; }
+
+div.author {
+  display: flex; }
+  div.author img.avatar {
+    flex: 0;
+    margin-right: 20px; }
+  div.author .labels {
+    flex: 1; }
+    div.author .labels .name {
+      font-weight: bold; }
+
+img {
+  max-width: 100%; }
+
+img.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; }

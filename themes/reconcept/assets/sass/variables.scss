@@ -37,15 +37,10 @@ $col-accent: $c-blue-bright;
 $col-gaia: #00bcbd;
 $col-purple: #54288b;
 
-// active
-$col-active-dark: $c-blue-dark;
-$col-active: $c-blue;
-$col-active-bg: $c-blue-lightest;
-$col-active-disabled: $c-gray;
-
-$col-info-dark: $c-blue-dark;
-$col-info: $c-blue;
-$col-info-bg: $c-blue-lightest;
+// brand
+$col-brand-dark: $c-blue-dark;
+$col-brand: $c-blue;
+$col-brand-bg: $c-blue-lightest;
 
 // positive
 $col-positive-dark: $c-green-dark;
@@ -78,3 +73,5 @@ $col-bg-subtle: $c-blue-subtle;
 $col-text-primary: $c-gray-darkest;
 $col-text-secondary: $c-gray-dark;
 $col-text-muted: rgba(black, 0.5);
+$col-text-light: $c-gray-light;
+$col-text-light-muted: rgba(white, .5);

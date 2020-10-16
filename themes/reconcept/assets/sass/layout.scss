@@ -1,0 +1,35 @@
+$vertical-spacing: 150px;
+$vertical-padding: 30px;
+
+section {
+  
+  &.spaced {
+    margin-top: $vertical-spacing;
+    margin-bottom: $vertical-spacing;
+  }
+  
+  &.dark {
+    background-color: $col-bg-darker;
+    color: $col-text-light;
+  }
+
+}
+
+.row {
+  &.padded {
+    padding-top: $vertical-padding;
+    padding-bottom: $vertical-padding;
+  }
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1000px;
+  margin: 0 auto; //align self centered in column
+  > * {
+    padding: 10px;
+    width: 200px;
+  }
+}
