@@ -1,0 +1,80 @@
+// gray
+$c-gray-darkest: #2d2d2a;
+$c-gray-darker: #4a4a4a;
+$c-gray-dark: #5d6c7f;
+$c-gray: #798ca3;
+$c-gray-light: #e8e9eb;
+$c-gray-lightest: #fafbfb;
+
+// blue bright
+$c-blue-bright: #27baff;
+
+// blue
+$c-blue-darker: #0b4f6c;
+$c-blue-dark: #33658a;
+$c-blue: #007bc0;
+$c-blue-lightest: #ecf5f9;
+$c-blue-subtle: #e1e7ea;
+
+// green
+$c-green-dark: #007c58;
+$c-green: #00a676;
+$c-green-lightest: #d4f5eb;
+
+// yellow
+$c-yellow-dark: #a07500;
+$c-yellow: #fcba04;
+$c-yellow-lightest: #fff3d3;
+
+// red
+$c-red-dark: #ad3b1f;
+$c-red: #f06543;
+$c-red-lightest: #fce3dd;
+
+// accent
+$col-primary: $c-blue-bright;
+$col-accent: $c-blue-bright;
+$col-gaia: #00bcbd;
+$col-purple: #54288b;
+
+// active
+$col-active-dark: $c-blue-dark;
+$col-active: $c-blue;
+$col-active-bg: $c-blue-lightest;
+$col-active-disabled: $c-gray;
+
+$col-info-dark: $c-blue-dark;
+$col-info: $c-blue;
+$col-info-bg: $c-blue-lightest;
+
+// positive
+$col-positive-dark: $c-green-dark;
+$col-positive: $c-green;
+$col-positive-bg: $c-green-lightest;
+
+// alert
+$col-alert-dark: $c-yellow-dark;
+$col-alert: $c-yellow;
+$col-alert-bg: $c-yellow-lightest;
+
+// progress is a separate variable, since in the future it may change from the alert color
+$col-progress: $c-yellow;
+
+// negative
+$col-negative-dark: $c-red-dark;
+$col-negative: $c-red;
+$col-negative-bg: $c-red-lightest;
+
+// grays
+$col-bg-darkest: $c-gray-darkest;
+$col-bg-darker: $c-gray-darker;
+$col-ui-bg: $c-gray-light;
+$col-bg: $c-gray-lightest;
+$col-neutral: $c-gray;
+$col-lines: $c-gray-light;
+$col-bg-subtle: $c-blue-subtle;
+
+// practical
+$col-text-primary: $c-gray-darkest;
+$col-text-secondary: $c-gray-dark;
+$col-text-muted: rgba(black, 0.5);
