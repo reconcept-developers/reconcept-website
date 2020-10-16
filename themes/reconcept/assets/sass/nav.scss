@@ -1,9 +1,7 @@
-$vertical-spacing: 150px;
-$vertical-padding: 30px;
+$navbar-height: 64px;
 
 nav.nav-header {
   width: 100%;
-  // height: 60px;
   background: white;
   position: fixed;
   z-index: 1;
@@ -12,20 +10,135 @@ nav.nav-header {
   ul {
     list-style: none;
     display: flex;
-    height: 100%;
+    flex-direction: column;
+    position: relative;
     margin: 0;
     padding: 0;
     li.nav-item {
-      height: 100%;
+      width: 100%;
       a.nav-link {
+        width: 100%;
         display: inline-block;
-        height: 100%;
         transition: background-color .3s;
+        color: $col-text-secondary;
         padding: 20px;
         &:hover {
+          color: $col-brand;
           background-color: $col-brand-bg;
         }
       }
+    }
+
+    // subnav
+    li.nav-item.expandable {
+
+      // the main 'title' item
+      .nav-link {
+        display: inline-block;
+        position: relative;
+        img.icon {
+          position: absolute;
+          right: 20px;
+          transition: transform .5s;
+          top: 24px;
+          // fill: $col-brand;
+        }
+      }
+
+      // subnav
+      nav {
+        display: none;
+        li a.nav-link {
+
+          // indent subnav on mobile
+          padding-left: 50px;
+
+          .title {
+            color: $col-text-secondary;
+          }
+          .description {
+            display: none;
+          }
+
+        }
+      } 
+
+      &.expanded {
+        nav {
+          display: initial;
+        }
+        .nav-link {
+          color: $col-brand;
+          img.icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Big screens
+@media only screen and (min-width: $breakpoint-large) {
+  nav.nav-header {
+    ul {
+      flex-direction: row;
+      li.nav-item {
+        width: auto;
+        .nav-link {
+          .icon {
+
+          }
+        }
+      }
+
+      li.nav-item.expandable {
+        // extra room for icon to the right
+        .nav-link {
+          padding-right: 40px;
+        }
+
+        // subnav
+        nav {
+          position: fixed;
+          left: 0;
+          top: $navbar-height;
+          bottom: 0;
+          width: 100%;
+          background-color: rgba(black, .2);
+          
+          .nav-bg {
+            background: white;
+            padding-bottom: 10px;
+            z-index: 1;
+          }
+          
+          ul {
+            flex-wrap: wrap;
+            li {
+              
+              flex-basis: 25%;
+              flex-shrink: 0;
+
+              a.nav-link {
+                padding: 50px 20px;
+
+                .title {
+                  display: block;
+                  margin-bottom: 5px;
+                  color: $col-brand;
+                }
+                .description {
+                  display: block;
+                  color: $col-text-secondary;
+                  font-size: smaller;
+                }
+              }
+            }
+          }
+        }
+      }
+
     }
   }
 }

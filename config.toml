@@ -2,3 +2,11 @@ baseURL = "https://reconcept.nl/"
 languageCode = "en-us"
 title = "Reconcept"
 theme = "reconcept"
+
+[module]
+  [[module.mounts]]
+    source = "node_modules/jquery-lite/dist"
+    target = "static/jquery-lite"
+  [[module.mounts]]
+    source = "assets" 
+    target = "assets"

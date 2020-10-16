@@ -19,4 +19,9 @@
   <meta content="{{ .Site.BaseURL }}" property="og:url" />
   <meta content="{{ .Description }}" property="og:description" />
   <meta content="{{ .Site.BaseURL }}{{ .Param "featured_image" }}" property="og:image"/>
+  
+  {{ $script := resources.Get "scripts/main.js" }}
+  {{ $built := $script | js.Build "main.js" }}
+  <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+  
 </head>
