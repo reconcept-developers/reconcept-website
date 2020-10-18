@@ -1,0 +1,47 @@
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+
+        <li js-subnav class="expandable nav-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+          
+          <a class="nav-link" href="#" js-subnav-toggle>
+              {{ .Pre }}
+              <span>{{ .Name }}</span>
+              <span class="fal fa-angle-down icon"></span>
+          </a>
+
+          <nav>
+            <div class="nav-bg">
+              <div class="row">
+                <div class="col">
+                  <ul>
+                    {{ range .Children }}
+                    <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                      <a class="nav-link" href="{{ .URL }}">
+                        <span class="title">
+                          {{ .Name }}
+                        </span>
+                        <span class="description">
+                          {{ .Page.Description }}
+                        </span>
+                      </a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </li>
+
+    {{ else }}
+
+      <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+        <a class="nav-link" href="{{ .URL }}">
+          {{ .Pre }}
+          <span>{{ .Name }}</span>
+        </a>
+      </li>
+
+    {{ end }}
+{{ end }}

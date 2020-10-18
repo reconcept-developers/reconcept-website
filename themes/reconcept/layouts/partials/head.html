@@ -1,5 +1,5 @@
 <head>
-  <title>{{.Title}}</title>
+  <title>{{.Title}} &middot; {{ .Site.Title }}</title>
   {{ $sass := resources.Get "sass/main.scss" }} {{ $style := $sass | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
@@ -13,8 +13,8 @@
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <meta content="{{ .Title }}" property="og:site_name" />
-  <meta content="{{ .Title }}" property="og:title" />
+  <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:site_name" />
+  <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:title" />
   <meta content="website" property="og:type" />
   <meta content="{{ .Site.BaseURL }}" property="og:url" />
   <meta content="{{ .Description }}" property="og:description" />

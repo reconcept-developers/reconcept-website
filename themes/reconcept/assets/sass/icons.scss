@@ -1,4 +1,14 @@
-img.icon {
-  height: 20px;
-  vertical-align: text-bottom;
+.fa, .fab, .fal {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: -1px;
+
+}
+
+ul.icon-list {
+  list-style: none;
+  padding-left: 10px;
 }
