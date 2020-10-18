@@ -7300,6 +7300,9 @@ img.logo {
   height: 1em;
   vertical-align: text-bottom; }
 
+ul {
+  list-style: none; }
+
 .fa, .fab, .fal {
   display: inline-block;
   width: 1em;
@@ -7343,7 +7346,9 @@ nav.nav-header {
         position: absolute;
         right: 20px;
         transition: transform .5s;
-        top: 24px; }
+        top: 24px;
+        margin: 0;
+        width: auto; }
     nav.nav-header ul li.nav-item.expandable nav {
       display: none; }
       nav.nav-header ul li.nav-item.expandable nav li a.nav-link {
