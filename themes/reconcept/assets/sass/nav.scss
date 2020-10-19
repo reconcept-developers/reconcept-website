@@ -7,6 +7,21 @@ nav.nav-header {
   z-index: 1;
   top: 0;
 
+  .col.main-header-bar {
+    position: relative;
+    display: flex;
+
+    .nav-items-right {
+      white-space: nowrap;
+      flex-direction: row;
+      margin-left: auto;
+      li.nav-item {
+        width: auto;          
+        padding: 10px 5px;
+      }
+    }
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -81,9 +96,58 @@ nav.nav-header {
   }
 }
 
+// Mobile only
+@media only screen and (max-width: $breakpoint-large) {
+  nav.nav-header ul.nav-main {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: white;
+    .col {
+      padding: 0;
+    }
+  }
+
+  nav.nav-header {
+    
+    .nav-main-toggle {
+      .fal {
+        margin: 0 !important;
+      }
+    }
+    .show-expanded {
+      display: none;
+    }
+    
+    &.expanded {
+      .show-expanded {
+        display: initial;
+      }
+      .hide-expanded {
+        display: none;
+      }
+      .nav-main {
+        display: flex;
+      }
+    }
+  }
+}
+
 // Big screens
 @media only screen and (min-width: $breakpoint-large) {
   nav.nav-header {
+
+    .col.main-header-bar {
+      display: flex;
+      
+      .nav-items-right {
+        margin-left: auto;
+        align-items: center;
+      }
+    }
+    
     ul {
       flex-direction: row;
       li.nav-item {

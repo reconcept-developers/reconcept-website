@@ -7169,28 +7169,25 @@ body {
   font-family: "Source Sans Pro", serif;
   line-height: 1.5; }
 
-.hidden-sm {
-  display: none; }
-
 section {
-  width: 100%; }
+  width: 100vw; }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100vw;
   margin-left: auto;
   margin-right: auto; }
   @media only screen and (min-width: 540px) {
     .row {
-      width: 80%; } }
+      width: 80vw; } }
   @media only screen and (min-width: 1280px) {
     .row {
-      width: 75%;
+      width: 75vw;
       max-width: 1280px; } }
   .row .col {
     flex: 1 1;
-    padding: 0 5px; }
+    padding: 0 30px; }
 
 @media only screen and (max-width: 960px) {
   .row {
@@ -7199,6 +7196,14 @@ section {
       flex-basis: 100%; }
       .row .col.wrap-last {
         order: 99; } }
+
+@media only screen and (max-width: 540px) {
+  .hidden-sm {
+    display: none !important; } }
+
+@media only screen and (min-width: 1280px) {
+  .hidden-large {
+    display: none !important; } }
 
 h1 {
   font-size: 2.5rem; }
@@ -7781,6 +7786,16 @@ nav.nav-header {
   position: fixed;
   z-index: 1;
   top: 0; }
+  nav.nav-header .col.main-header-bar {
+    position: relative;
+    display: flex; }
+    nav.nav-header .col.main-header-bar .nav-items-right {
+      white-space: nowrap;
+      flex-direction: row;
+      margin-left: auto; }
+      nav.nav-header .col.main-header-bar .nav-items-right li.nav-item {
+        width: auto;
+        padding: 10px 5px; }
   nav.nav-header ul {
     list-style: none;
     display: flex;
@@ -7825,7 +7840,33 @@ nav.nav-header {
       nav.nav-header ul li.nav-item.expandable.expanded .nav-link .icon {
         transform: rotate(180deg); }
 
+@media only screen and (max-width: 1280px) {
+  nav.nav-header ul.nav-main {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: white; }
+    nav.nav-header ul.nav-main .col {
+      padding: 0; }
+  nav.nav-header .nav-main-toggle .fal {
+    margin: 0 !important; }
+  nav.nav-header .show-expanded {
+    display: none; }
+  nav.nav-header.expanded .show-expanded {
+    display: initial; }
+  nav.nav-header.expanded .hide-expanded {
+    display: none; }
+  nav.nav-header.expanded .nav-main {
+    display: flex; } }
+
 @media only screen and (min-width: 1280px) {
+  nav.nav-header .col.main-header-bar {
+    display: flex; }
+    nav.nav-header .col.main-header-bar .nav-items-right {
+      margin-left: auto;
+      align-items: center; }
   nav.nav-header ul {
     flex-direction: row; }
     nav.nav-header ul li.nav-item {

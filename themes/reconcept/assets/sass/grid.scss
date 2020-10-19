@@ -21,32 +21,27 @@ body {
   line-height: $font-height;
 }
 
-// utility
-.hidden-sm {
-  display: none;
-}
-
 // grid
-$gutter: 10px;
+$gutter: 60px;
 
 section {
-  width: 100%;
+  width: 100vw;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
 
-  width: 90%;
+  width: 100vw;
   margin-left: auto;
   margin-right: auto;
 
   @media only screen and (min-width: $breakpoint-small) {
-    width: 80%;
+    width: 80vw;
   }
 
   @media only screen and (min-width: $breakpoint-large) {
-    width: 75%;
+    width: 75vw;
     max-width: $breakpoint-large;
   }
 
@@ -66,5 +61,18 @@ section {
         order: 99;
       }
     }
+  }
+}
+
+// utility
+.hidden-sm {
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none !important;
+  }
+}
+
+.hidden-large {
+  @media only screen and (min-width: $breakpoint-large) {
+    display: none !important;
   }
 }

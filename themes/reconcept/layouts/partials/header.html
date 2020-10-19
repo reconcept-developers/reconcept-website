@@ -1,16 +1,61 @@
-<nav class="nav-header">
+<nav class="nav-header" js-nav-header>
   <div class="row">
-    <div class="col">
+    <div class="col main-header-bar">
 
-      <ul>
+      <ul class="nav-logo">
         <li class="nav-item">
           <a class="nav-link" href="/">
             <img class="logo" src="/svg/logo-blue.svg"/>
           </a>
         </li>
+      </ul>
 
+      <ul class="nav-main">
         {{- partial "header-nav-items.html" . -}}
+      </ul>
 
+      <ul class="nav-items-right">
+        <li class="nav-item">
+              
+          <a
+            href="/support"
+            target="_blank"
+            class="button"
+          >
+            <span class="fal fa-question-circle"></span>
+            <span>
+              Support
+            </span>
+          </a>
+        </li>
+
+        <li class="nav-item hidden-sm">
+              
+          <a
+            href="https://portfolio.reconcept.nl"
+            target="_blank"
+            class="green button"
+            >
+            <!-- currently hidden on small screens since login is not possible -->
+            <span class="fal fa-lock"></span>
+            <span>
+              Log in
+            </span>
+          </a>
+            
+        </li>
+
+        <li class="nav-item hidden-large">
+              
+          <button js-nav-main-toggle
+            class="transparent button nav-main-toggle"
+            >
+            <!-- currently hidden on small screens since login is not possible -->
+            <span class="fal fa-bars hide-expanded"></span>
+            <span class="fal fa-times show-expanded"></span>
+          </button>
+            
+        </li>
       </ul>
 
     </div>
