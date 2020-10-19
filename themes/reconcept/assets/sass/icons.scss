@@ -2,13 +2,24 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin-right: 5px;
   text-align: center;
   vertical-align: -1px;
 
+  position: relative;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+
+  // if before text, no margin left
+  &:first-child {
+    margin-left: 0;
+  }
+  // if after text, no margin right
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 ul.icon-list {
   list-style: none;
-  padding-left: 10px;
+  // padding-left: 10px;
 }

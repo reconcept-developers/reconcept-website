@@ -2,13 +2,42 @@
   <div class="row padded">
     <div class="col">
       <img class="logo" src="/svg/logo-white.svg"/>
+
+      <p class="smaller">
+        &copy; {{ now.Format "2006"}} Reconcept
+      </p>
+
+      <ul class="icon-list">
+        <li>
+          <span class="fab fa-linkedin"></span>
+          <a
+            href="https://www.linkedin.com/company/reconcept-it/"
+            target="_blank"
+            >Volg ons op LinkedIn</a
+          >
+        </li>
+      </ul>
+
     </div>
+
     <div class="col">
-      Footer
+      <b>
+        Producten
+      </b>
+      <ul>
+        {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "products") -}}
+      </ul>
     </div>
+    
     <div class="col">
-      Footer
+      <b>
+        Meer informatie
+      </b>
+      <ul>
+        {{- partial "footer-nav-items" .Site.Menus.secondary -}}
+      </ul>
     </div>
+    
   </div>
 </section>
 

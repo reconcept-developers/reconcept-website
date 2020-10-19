@@ -41,6 +41,7 @@ $col-purple: #54288b;
 $col-brand-dark: $c-blue-dark;
 $col-brand: $c-blue;
 $col-brand-bg: $c-blue-lightest;
+$col-active: $c-blue;
 
 // positive
 $col-positive-dark: $c-green-dark;
@@ -80,3 +81,7 @@ $col-text-light-muted: rgba(white, .5);
 $breakpoint-small: 540px;
 $breakpoint-med: 960px; 
 $breakpoint-large: 1280px;
+
+
+$button-height: 40px;
+$button-spacing: 10px;

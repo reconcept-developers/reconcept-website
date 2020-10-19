@@ -1,0 +1,160 @@
+$colors-list: (
+  'blue',
+  'bright-blue',
+  'green',
+  'yellow',
+  'red',
+  'primary',
+  'positive',
+  'negative',
+  'progress',
+  'active',
+  'gaia',
+  'purple'
+);
+$colors-list-vars: (
+  $c-blue,
+  $c-blue-bright,
+  $c-green,
+  $c-yellow,
+  $c-red,
+  $col-primary,
+  $col-positive,
+  $col-negative,
+  $col-progress,
+  $col-active,
+  $col-gaia,
+  $col-purple
+);
+
+@function color-lighter($color) {
+  @return scale-color($color, $lightness: 10%);
+}
+@function color-darker($color) {
+  @return scale-color($color, $lightness: -10%);
+}
+@function contrasting-text-color($accent-color, $background-color: $accent-color) {
+  // on a dark (or colorful) background, display white text
+  @if lightness($background-color) < 80% {
+    @return white;
+  } @else {
+    // on a light background, prefer the accent color if it's not too light
+    @if lightness($accent-color) < 80% {
+      @return $accent-color;
+    } @else {
+      // otherwise create a dark version of the color for contrast
+      @return scale-color($accent-color, $lightness: -50%);
+    }
+  }
+}
+
+// apply default colors
+@mixin color-default($color) {
+  &:not(.transparent) {
+    background-color: $color;
+    color: contrasting-text-color($color);
+  }
+  // exception for transparent buttons: use contrasting on white. The hover state is the same.
+  &.transparent {
+    color: contrasting-text-color($color, white);
+  }
+}
+
+// apply a 'basic' color set with colored border and text
+@mixin color-basic($color, $text-color: $color) {
+  border: 1px solid $color;
+  background-color: white;
+  color: contrasting-text-color($color, white);
+}
+
+@mixin color-hover($color) {
+  background-color: color-darker($color) !important;
+  color: contrasting-text-color($color) !important;
+}
+
+// batch add default styles for colors
+@mixin defaultColors() {
+  // apply default color (no color class)
+  // except on .basic elements, otherwise we would have to unset properties
+  &:not(.basic) {
+    @include color-default($col-ui-bg);
+
+    $i: 1;
+    //use the position of colors-list to grab the equivalent color value
+    @each $item in $colors-list {
+      &.#{$item} {
+        $color: nth($colors-list-vars, $i);
+        @include color-default($color);
+      }
+      $i: $i + 1;
+    }
+  }
+}
+
+// batch add .basic styles for colors
+@mixin basicColors() {
+  // apply default color (no color class)
+  &.basic {
+    @include color-basic($col-ui-bg, $col-text-secondary);
+  }
+
+  //use the position of colors-list to grab the equivalent color value
+  $i: 1;
+  @each $item in $colors-list {
+    &.basic.#{$item} {
+      $color: nth($colors-list-vars, $i);
+      @include color-basic($color);
+    }
+    $i: $i + 1;
+  }
+}
+
+// batch add :hover styles for colors
+@mixin hoverColors() {
+  // apply default hover color (no color class)
+  &:hover {
+    @include color-hover($c-blue);
+
+    .muted {
+      color: inherit;
+    }
+  }
+
+  // additional selected definition
+  // so that on a non-colored button, the selected color will still be active
+  &.selected {
+    background-color: $col-active;
+    border-color: $col-active;
+    color: white;
+  }
+
+  //use the position of colors-list to grab the equivalent color value
+  $i: 1;
+  @each $item in $colors-list {
+    &.#{$item}:hover {
+      $color: nth($colors-list-vars, $i);
+      @include color-hover($color);
+    }
+    $i: $i + 1;
+  }
+}
+
+// batch add .selected styles for colors
+// uses :hover colors
+@mixin selectedColors() {
+  // additional selected definition
+  // so that on a non-colored button, the selected color will still be active
+  &.selected {
+    @include color-hover($col-active);
+  }
+
+  //use the position of colors-list to grab the equivalent color value
+  $i: 1;
+  @each $item in $colors-list {
+    &.#{$item}.selected {
+      $color: nth($colors-list-vars, $i);
+      @include color-hover($color);
+    }
+    $i: $i + 1;
+  }
+}

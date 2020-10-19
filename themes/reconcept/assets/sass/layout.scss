@@ -11,6 +11,19 @@ section {
   &.dark {
     background-color: $col-bg-darker;
     color: $col-text-light;
+
+    a {
+      color: white;
+    }
+  }
+  
+  &.paper {
+    .row {
+      background: white;
+      @include shadow;
+      padding: 0 30px;
+      border-radius: 2px;
+    }
   }
 
 }

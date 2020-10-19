@@ -1,0 +1,244 @@
+
+// unset some browser styles
+button {
+  font: inherit;
+  padding: initial;
+  margin: initial;
+  background: transparent;
+
+  &.active:focus,
+  &:active:focus,
+  &:focus {
+    outline: none;
+    box-shadow: inherit !important;
+  }
+}
+
+button.button,
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  height: $button-height;
+  text-decoration: none !important;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  border-radius: 2px;
+
+  @include defaultColors();
+  @include basicColors();
+  @include hoverColors();
+  @include selectedColors();
+
+  // @Todo distinguish between actually disabled and read-only style buttons (e.g. form selected option display)
+  &[disabled],
+  &[disabled]:hover,
+  &.disabled,
+  &.disabled:hover {
+    pointer-events: none;
+    &:not(.selected):not(.highlight) {
+      opacity: 0.5;
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+
+  &.circular.icon {
+    $icon-size: 16px;
+    border-radius: 50%;
+    width: $icon-size + 12px;
+    height: $icon-size + 12px;
+    vertical-align: middle;
+    font-size: $icon-size;
+    margin: 0 5px;
+    padding: 0;
+    font-weight: normal;
+    fa-icon {
+      top: 0;
+      margin-left: 0;
+      height: $icon-size;
+      line-height: 0;
+      .svg-inline--fa {
+        height: $icon-size;
+        vertical-align: 0;
+      }
+    }
+  }
+
+  &.big {
+    padding: 0 22px;
+    height: 1.5 * $button-height;
+    font-size: 1.1em;
+  }
+
+  //make sure a button pulled to the right doesn't get covered by a title element
+  &.pull-right {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.aligned.left {
+    //using space-between makes sure that on a stretched button with multiple items
+    // they get positioned nicely (e.g. a right label)
+    justify-content: space-between;
+  }
+
+  &.detailed {
+    overflow: hidden;
+
+    &.right {
+      padding-right: 0;
+      .detail,
+      > fa-icon {
+        margin-left: 15px;
+      }
+    }
+    &:not(.right) {
+      padding-left: 0;
+      .detail,
+      > fa-icon {
+        margin-right: 15px;
+      }
+    }
+
+    .detail,
+    > fa-icon {
+      background: rgba(black, 0.03);
+      align-self: stretch;
+      height: auto;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 15px;
+    }
+  }
+}
+
+// a .spaced next to another button gets margin-left
+.button.spaced + .spaced {
+  margin-left: $button-spacing;
+
+  &.pull-right {
+    margin-left: 0;
+    margin-right: $button-spacing;
+  }
+}
+
+// button group
+.buttons {
+  max-width: 100%;
+  display: inline-block;
+
+  &.full-width {
+    display: flex;
+    button.button {
+      justify-content: center; //center text
+    }
+  }
+
+  &.center {
+    width: 100%;
+  }
+
+  // display as radio buttons
+  &.buttons-radio {
+    display: block;
+    flex-direction: column;
+    button.button {
+      display: block;
+      margin: 0;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  button.button {
+    margin-left: 0;
+    flex-grow: 1;
+    flex: 1 0 auto;
+    position: relative;
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-right: 5px;
+    }
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.selected.color-progress,
+    &.highlight.color-progress {
+      background-color: $col-progress;
+      border-color: $col-progress;
+    }
+
+    &.selected.color-positive,
+    &.highlight.color-positive {
+      background-color: $col-positive;
+      border-color: $col-positive;
+    }
+
+    // descriptive tooltip on hover
+    &:hover .hover-description,
+    &.selected .hover-description {
+      opacity: 1;
+    }
+
+    &:hover .hover-description {
+      transform: translate3d(0, -2px, 0);
+    }
+
+    .hover-description {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 8px;
+
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &.buttons-flex {
+    display: flex;
+    > * {
+      flex: 1 0 auto;
+      // we set padding to 0, since buttons will get auto width and center text
+      // and it saves space for text on small screens
+      padding: 0;
+    }
+  }
+}
+
+// optionally wrap a .buttons in a .buttons-container to show
+// a selected option description
+.buttons-container {
+  .description {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: smaller;
+    color: $col-text-secondary;
+  }
+}
+
+// in some cases we need to nest content
+// with wrappers inside a button. To make sure the alignment of label and detail work out,
+// the nested containers need the button-label-container class
+.button .button-label-container {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+}

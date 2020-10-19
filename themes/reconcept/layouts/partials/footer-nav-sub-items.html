@@ -1,0 +1,22 @@
+{{ $submenu := .submenu }}
+
+{{ range .context.Site.Menus.main }}
+
+  {{ if eq .Identifier $submenu }}
+
+    {{ range .Children }}
+
+    <li>
+      
+      <a class="" href="{{ .URL }}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+
+    </li>
+
+    {{ end }}
+
+  {{ end }}
+
+{{ end }}
