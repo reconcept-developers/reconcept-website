@@ -1,6 +1,11 @@
 $vertical-spacing: 140px;
 $vertical-padding: 30px;
 
+#content {
+  // space for fixed topbar
+  padding-top: 64px;
+}
+
 section {
   
   &.spaced {

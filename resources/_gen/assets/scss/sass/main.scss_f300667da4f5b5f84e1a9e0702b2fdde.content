@@ -7256,6 +7256,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+#content {
+  padding-top: 64px; }
+
 section.spaced {
   margin-top: 140px;
   margin-bottom: 140px; }
