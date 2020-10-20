@@ -7264,6 +7264,57 @@ a {
   a:hover {
     text-decoration: underline; }
 
+h1.highlight,
+h2.highlight,
+h3.highlight,
+span.highlight {
+  display: inline;
+  padding: .04em .3em;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  border-radius: 2px; }
+  h1.highlight.highlight-margin,
+  h2.highlight.highlight-margin,
+  h3.highlight.highlight-margin,
+  span.highlight.highlight-margin {
+    margin: 5px; }
+  h1.highlight.blue,
+  h2.highlight.blue,
+  h3.highlight.blue,
+  span.highlight.blue {
+    color: white;
+    background-color: #007bc0; }
+  h1.highlight.bright-blue,
+  h2.highlight.bright-blue,
+  h3.highlight.bright-blue,
+  span.highlight.bright-blue {
+    color: white;
+    background-color: #27baff; }
+  h1.highlight.green,
+  h2.highlight.green,
+  h3.highlight.green,
+  span.highlight.green {
+    color: white;
+    background-color: #00a676; }
+  h1.highlight.yellow,
+  h2.highlight.yellow,
+  h3.highlight.yellow,
+  span.highlight.yellow {
+    color: white;
+    background-color: #fcba04; }
+  h1.highlight.red,
+  h2.highlight.red,
+  h3.highlight.red,
+  span.highlight.red {
+    color: white;
+    background-color: #f06543; }
+  h1.highlight.purple,
+  h2.highlight.purple,
+  h3.highlight.purple,
+  span.highlight.purple {
+    color: white;
+    background-color: #54288b; }
+
 #content {
   padding-top: 64px; }
 
@@ -7310,9 +7361,11 @@ section.dark, section.blue, section.green, section.yellow, section.blue-bright {
 .logo-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  background: white;
+  border-radius: 2px; }
   .logo-grid > .grid-cell {
-    padding: 10px;
+    padding: 30px;
     flex: 0 0 50%;
     text-align: center; }
   @media only screen and (min-width: 540px) {
@@ -8147,3 +8200,7 @@ nav.nav-header {
               display: block;
               color: #5d6c7f;
               font-size: smaller; } }
+
+.video iframe {
+  width: 100%;
+  height: 300px; }
