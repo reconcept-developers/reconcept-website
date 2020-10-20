@@ -83,6 +83,11 @@ a.button {
     z-index: 1;
   }
 
+  &.full-width {
+    display: block;
+    width: 100%;
+  }
+
   &.aligned.left {
     //using space-between makes sure that on a stretched button with multiple items
     // they get positioned nicely (e.g. a right label)

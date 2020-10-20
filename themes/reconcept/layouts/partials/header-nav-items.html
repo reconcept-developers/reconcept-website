@@ -12,23 +12,21 @@
 
           <nav>
             <div class="nav-bg">
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    {{ range .Children }}
-                    <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                      <a class="nav-link" href="{{ .URL }}">
-                        <span class="title">
-                          {{ .Name }}
-                        </span>
-                        <span class="description">
-                          {{ .Page.Description }}
-                        </span>
-                      </a>
-                    </li>
-                    {{ end }}
-                  </ul>
-                </div>
+              <div class="container">
+                <ul>
+                  {{ range .Children }}
+                  <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                    <a class="nav-link" href="{{ .URL }}">
+                      <span class="title">
+                        {{ .Name }}
+                      </span>
+                      <span class="description">
+                        {{ .Page.Description }}
+                      </span>
+                    </a>
+                  </li>
+                  {{ end }}
+                </ul>
               </div>
             </div>
           </nav>

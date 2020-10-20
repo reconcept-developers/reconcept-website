@@ -7,7 +7,7 @@ nav.nav-header {
   z-index: 1;
   top: 0;
 
-  .col.main-header-bar {
+  .main-header-bar {
     position: relative;
     display: flex;
 
@@ -139,7 +139,7 @@ nav.nav-header {
 @media only screen and (min-width: $breakpoint-large) {
   nav.nav-header {
 
-    .col.main-header-bar {
+    .main-header-bar {
       display: flex;
       
       .nav-items-right {
