@@ -12,7 +12,7 @@ body {
   font-size: 100%;
   background: $col-bg;
   color: $col-text-primary;
-
+  overflow-x: hidden;
 }
 
 * {
@@ -28,7 +28,6 @@ $gutter: 30px;
   width: 100vw;
   margin: 0 auto;
   // border: 1px solid red;
-  overflow-x: hidden; //prevent scrolling h
   @media only screen and (min-width: $breakpoint-small) {
     width: 80vw;
   }
@@ -50,6 +49,10 @@ $gutter: 30px;
     flex: 1 1;
     // border: 1px solid blue;
     padding: 0 .5*$gutter;
+
+    &:not(:last-child){
+      margin-bottom: .5*$gutter;
+    }
   }
 }
 

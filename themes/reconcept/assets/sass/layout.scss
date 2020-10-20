@@ -31,6 +31,9 @@ section {
   &.blue {
     background-color: $col-brand;
   }
+  &.blue-bright {
+    background-color: $c-blue-bright;
+  }
   &.green {
     background-color: $c-green;
   }
@@ -38,7 +41,7 @@ section {
     background-color: $c-yellow;
   }
   
-  &.dark, &.blue, &.green, &.yellow {
+  &.dark, &.blue, &.green, &.yellow, &.blue-bright {
     color: $col-text-light;
     a {
       color: white;

@@ -7162,7 +7162,8 @@ body {
   top: 0;
   font-size: 100%;
   background: #fafbfb;
-  color: #2d2d2a; }
+  color: #2d2d2a;
+  overflow-x: hidden; }
 
 * {
   box-sizing: border-box;
@@ -7171,8 +7172,7 @@ body {
 
 .container {
   width: 100vw;
-  margin: 0 auto;
-  overflow-x: hidden; }
+  margin: 0 auto; }
   @media only screen and (min-width: 540px) {
     .container {
       width: 80vw; } }
@@ -7188,6 +7188,8 @@ body {
   .row .col {
     flex: 1 1;
     padding: 0 15px; }
+    .row .col:not(:last-child) {
+      margin-bottom: 15px; }
 
 @media only screen and (max-width: 960px) {
   .row {
@@ -7276,15 +7278,18 @@ section.dark {
 section.blue {
   background-color: #007bc0; }
 
+section.blue-bright {
+  background-color: #27baff; }
+
 section.green {
   background-color: #00a676; }
 
 section.yellow {
   background-color: #fcba04; }
 
-section.dark, section.blue, section.green, section.yellow {
+section.dark, section.blue, section.green, section.yellow, section.blue-bright {
   color: #e8e9eb; }
-  section.dark a, section.blue a, section.green a, section.yellow a {
+  section.dark a, section.blue a, section.green a, section.yellow a, section.blue-bright a {
     color: white; }
 
 .row.padded {
@@ -7674,7 +7679,6 @@ a.button {
     z-index: 1; }
   button.button.full-width,
   a.button.full-width {
-    display: block;
     width: 100%; }
   button.button.aligned.left,
   a.button.aligned.left {
@@ -7872,7 +7876,8 @@ textarea {
 form:not(.submitted) .show-submitted {
   opacity: 0;
   transform: scale3d(0.9, 0.9, 1);
-  margin-top: -50px; }
+  margin-top: -50px;
+  pointer-events: none; }
 
 form.submitted .hide-submitted {
   display: none; }
