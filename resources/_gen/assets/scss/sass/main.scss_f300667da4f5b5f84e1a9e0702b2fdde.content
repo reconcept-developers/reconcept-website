@@ -7368,6 +7368,8 @@ section.dark, section.blue, section.green, section.yellow, section.blue-bright {
     padding: 30px;
     flex: 0 0 50%;
     text-align: center; }
+    .logo-grid > .grid-cell img {
+      max-width: 150px; }
   @media only screen and (min-width: 540px) {
     .logo-grid.three-columns > .grid-cell {
       flex-basis: 33%; }
