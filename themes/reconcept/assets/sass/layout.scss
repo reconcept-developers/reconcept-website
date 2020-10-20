@@ -1,4 +1,4 @@
-$vertical-spacing: 150px;
+$vertical-spacing: 140px;
 $vertical-padding: 30px;
 
 section {
@@ -8,21 +8,40 @@ section {
     margin-bottom: $vertical-spacing;
   }
   
-  &.dark {
-    background-color: $col-bg-darker;
-    color: $col-text-light;
-
-    a {
-      color: white;
-    }
-  }
-  
   &.paper {
     .row {
       background: white;
       @include shadow;
       padding: 0 30px;
       border-radius: 2px;
+    }
+  }
+
+  // colors
+  &.padded {
+    padding: $vertical-padding;
+    border-radius: $br;
+    h2, h3 {
+      margin-top: 0;
+    }
+  }
+  &.dark {
+    background-color: $col-bg-darker;
+  }
+  &.blue {
+    background-color: $col-brand;
+  }
+  &.green {
+    background-color: $c-green;
+  }
+  &.yellow {
+    background-color: $c-yellow;
+  }
+  
+  &.dark, &.blue, &.green, &.yellow {
+    color: $col-text-light;
+    a {
+      color: white;
     }
   }
 

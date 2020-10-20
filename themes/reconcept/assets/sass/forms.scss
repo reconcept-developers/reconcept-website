@@ -62,6 +62,7 @@ textarea {
 form:not(.submitted) .show-submitted {
   opacity: 0;
   transform: scale3d(.9,.9,1);
+  margin-top: -50px;
 }
 
 form.submitted {
