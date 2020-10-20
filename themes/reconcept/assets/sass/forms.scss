@@ -1,0 +1,79 @@
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='date'],
+input[type='password'],
+textarea {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  min-height: $input-height;
+  height: $input-height; //set height for IE vertical alignment issue
+
+  border: 1px solid $col-lines;
+  border-radius: $br;
+
+  color: $col-text-primary;
+  font-family: $font-family;
+  font-size: inherit;
+
+  background-color: white;
+
+  transition: border-color 0.5s, background-color 0.5s;
+
+  &.big {
+    font-size: larger;
+    padding: 10px 15px;
+  }
+
+  &.hide-border:not(:focus):not(:hover):not(.ng-invalid) {
+    border-color: transparent;
+  }
+
+  // only show border when in focus
+  &.input-camouflaged {
+    border-color: transparent;
+    transition: border-color 0.3s;
+
+    &:hover:not(:focus) {
+      border-color: $col-lines;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $col-active;
+    color: $col-active;
+  }
+}
+
+input[disabled],
+textarea[disabled] {
+  color: $col-text-muted;
+}
+
+textarea {
+  font-size: inherit;
+  padding-top: 10px;
+  min-height: 100px;
+}
+
+form:not(.submitted) .show-submitted {
+  opacity: 0;
+  transform: scale3d(.9,.9,1);
+}
+
+form.submitted {
+
+  .hide-submitted {
+    display: none;
+  }
+
+  .show-submitted {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+    transition: opacity .3s, transform .3s;
+  }
+
+}
