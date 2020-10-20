@@ -43,16 +43,14 @@ $gutter: 30px;
   flex-wrap: wrap;
   margin-left: -.5*$gutter;
   margin-right: -.5*$gutter;
+  // vertical
+  align-items: center;
   // border: 1px solid green;
 
   .col {
     flex: 1 1;
     // border: 1px solid blue;
     padding: 0 .5*$gutter;
-
-    &:not(:last-child){
-      margin-bottom: .5*$gutter;
-    }
   }
 }
 
@@ -61,8 +59,14 @@ $gutter: 30px;
     flex-wrap: wrap;
     .col {
       flex-basis: 90%;
+      &:not(:last-child):not(.wrap-last){
+        margin-bottom: .5*$gutter;
+      }
       &.wrap-last {
         order: 99;
+        // if wrapping last, this is not actually the last child, but the bottom most displayed,
+        // so we add top margin to compensate for the previous column not having a bottom margin
+        margin-top: .5*$gutter;
       }
     }
   }

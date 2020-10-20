@@ -1,4 +1,4 @@
-baseURL = "https://reconcept.nl/"
+baseURL = "http://reconcept-new.surge.sh/"
 languageCode = "en-us"
 title = "Reconcept"
 theme = "reconcept"

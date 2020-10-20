@@ -27,4 +27,7 @@ div.author {
       font-weight: bold;
     }
   }
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
 }

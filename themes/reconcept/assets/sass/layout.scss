@@ -66,10 +66,51 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  max-width: 1000px;
-  margin: 0 auto; //align self centered in column
-  > * {
+
+  // mobile
+  > .grid-cell {
     padding: 10px;
-    width: 200px;
+    flex: 0 0 50%;
+    text-align: center;
+  }
+
+  // medium
+  @media only screen and (min-width: $breakpoint-small) {
+    &.three-columns > .grid-cell {
+      flex-basis: 33%;
+    }
+  
+    &.four-columns > .grid-cell {
+      flex-basis: 33%;
+    }
+  
+    &.five-columns > .grid-cell {
+      flex-basis: 33%;
+      // in a five column layout displayed on medium screen we make thirds
+      // the nice layout would be 3x3, so every tenth item would look ugly
+      // we hide it
+      &:nth-child(10){
+        display: none;
+      }
+    }
+    
+  }
+
+  // large
+  @media only screen and (min-width: $breakpoint-med) {
+    &.three-columns > .grid-cell {
+      flex-basis: 33%;
+    }
+  
+    &.four-columns > .grid-cell {
+      flex-basis: 25%;
+    }
+  
+    &.five-columns > .grid-cell {
+      flex-basis: 20%;
+      &:nth-child(10){
+        display: initial;
+      }
+    }
   }
 }
