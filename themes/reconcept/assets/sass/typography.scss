@@ -51,11 +51,15 @@ h6 {
   font-size: larger;
 }
 
+.line-height {
+  line-height: 3em;
+}
+
 .smaller {
   font-size: smaller;
 }
 
-p {
+p, ul.list {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
@@ -85,6 +89,11 @@ span {
 
     &.highlight-margin {
       margin: 5px;
+    }
+
+    &.padded {
+      display: inline-block;
+      padding: 10px;
     }
 
     &.blue {

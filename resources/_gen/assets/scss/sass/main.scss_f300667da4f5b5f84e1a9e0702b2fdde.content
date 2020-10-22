@@ -7184,8 +7184,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
-  margin-right: -15px;
-  align-items: center; }
+  margin-right: -15px; }
   .row .col {
     flex: 1 1;
     padding: 0 15px; }
@@ -7247,10 +7246,13 @@ h6 {
 .larger {
   font-size: larger; }
 
+.line-height {
+  line-height: 3em; }
+
 .smaller {
   font-size: smaller; }
 
-p {
+p, ul.list {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8; }
@@ -7275,6 +7277,12 @@ span.highlight {
   h3.highlight.highlight-margin,
   span.highlight.highlight-margin {
     margin: 5px; }
+  h1.highlight.padded,
+  h2.highlight.padded,
+  h3.highlight.padded,
+  span.highlight.padded {
+    display: inline-block;
+    padding: 10px; }
   h1.highlight.blue,
   h2.highlight.blue,
   h3.highlight.blue,
@@ -7351,14 +7359,17 @@ section.dark, section.blue, section.green, section.yellow, section.blue-bright {
   section.dark a, section.blue a, section.green a, section.yellow a, section.blue-bright a {
     color: white; }
 
+section .row.alternating {
+  align-items: center; }
+
 @media only screen and (min-width: 960px) {
-  section:nth-child(even) .col:first-child {
+  section:nth-child(even) .row.alternating .col:first-child {
     order: 99; }
-  section:nth-child(odd) .col:last-child:not(:first-child) {
+  section:nth-child(odd) .row.alternating .col:last-child:not(:first-child) {
     text-align: right; } }
 
 @media only screen and (max-width: 960px) {
-  section .col:last-child:not(:first-child) {
+  section .row.alternating .col:last-child:not(:first-child) {
     text-align: center; } }
 
 .row.padded {
