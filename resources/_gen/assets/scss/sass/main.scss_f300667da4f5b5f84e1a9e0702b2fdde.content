@@ -8225,3 +8225,6 @@ nav.nav-header {
 .video iframe {
   width: 100%;
   height: 300px; }
+
+.video.larger iframe {
+  height: 400px; }
