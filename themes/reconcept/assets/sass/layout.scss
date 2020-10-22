@@ -53,6 +53,28 @@ section {
     }
   }
 
+  @media only screen and (min-width: $breakpoint-med) {
+    // alternate the order of columns for each row
+    // for each other row, put the first column last
+    &:nth-child(even){
+      .col:first-child {
+        order: 99;
+      }
+    }
+    // when the order is not swapped, we want to align the media in the right column right
+    &:nth-child(odd){
+      .col:last-child:not(:first-child){
+        text-align: right;
+      }
+    }
+  }
+  // on small screens, align the media in the last column center
+  @media only screen and (max-width: $breakpoint-med) {
+    .col:last-child:not(:first-child){
+      text-align: center;
+    }
+  }
+
 }
 
 .row {
@@ -68,6 +90,7 @@ section {
   justify-content: space-evenly;
   background: white;
   border-radius: $br;
+  width: 100%;
 
   // mobile
   > .grid-cell {

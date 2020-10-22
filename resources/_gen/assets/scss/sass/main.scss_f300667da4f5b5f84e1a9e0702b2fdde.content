@@ -7195,11 +7195,8 @@ body {
     flex-wrap: wrap; }
     .row .col {
       flex-basis: 90%; }
-      .row .col:not(:last-child):not(.wrap-last) {
-        margin-bottom: 15px; }
-      .row .col.wrap-last {
-        order: 99;
-        margin-top: 15px; } }
+      .row .col:not(:last-child) {
+        margin-bottom: 30px; } }
 
 @media only screen and (max-width: 540px) {
   .hidden-sm {
@@ -7354,6 +7351,16 @@ section.dark, section.blue, section.green, section.yellow, section.blue-bright {
   section.dark a, section.blue a, section.green a, section.yellow a, section.blue-bright a {
     color: white; }
 
+@media only screen and (min-width: 960px) {
+  section:nth-child(even) .col:first-child {
+    order: 99; }
+  section:nth-child(odd) .col:last-child:not(:first-child) {
+    text-align: right; } }
+
+@media only screen and (max-width: 960px) {
+  section .col:last-child:not(:first-child) {
+    text-align: center; } }
+
 .row.padded {
   padding-top: 30px;
   padding-bottom: 30px; }
@@ -7363,7 +7370,8 @@ section.dark, section.blue, section.green, section.yellow, section.blue-bright {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background: white;
-  border-radius: 2px; }
+  border-radius: 2px;
+  width: 100%; }
   .logo-grid > .grid-cell {
     padding: 30px;
     flex: 0 0 50%;
