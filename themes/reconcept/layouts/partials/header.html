@@ -2,11 +2,27 @@
   <div class="container main-header-bar">
 
       <ul class="nav-logo">
+        
+        <li class="nav-item hidden-large">
+              
+          <button js-nav-main-toggle
+            class="transparent button nav-main-toggle"
+            >
+            <!-- currently hidden on small screens since login is not possible -->
+            <span class="fal fa-bars hide-expanded"></span>
+            <span class="fal fa-times show-expanded"></span>
+            <span>
+              Menu
+            </span>
+          </button>
+            
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/">
             <img class="logo" src="/svg/logo-blue.svg"/>
           </a>
         </li>
+
       </ul>
 
       <ul class="nav-main">
@@ -14,6 +30,7 @@
       </ul>
 
       <ul class="nav-items-right">
+
         <li class="nav-item">
               
           <a
@@ -41,18 +58,6 @@
               Log in
             </span>
           </a>
-            
-        </li>
-
-        <li class="nav-item hidden-large">
-              
-          <button js-nav-main-toggle
-            class="transparent button nav-main-toggle"
-            >
-            <!-- currently hidden on small screens since login is not possible -->
-            <span class="fal fa-bars hide-expanded"></span>
-            <span class="fal fa-times show-expanded"></span>
-          </button>
             
         </li>
       </ul>

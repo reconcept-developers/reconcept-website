@@ -22,6 +22,12 @@
                       </span>
                       <span class="description">
                         {{ .Page.Description }}
+
+                        {{ if .Page.Params.Label }}
+                        <span class="green highlight">
+                          {{ .Page.Params.Label }}
+                        </span>
+                        {{ end }}
                       </span>
                     </a>
                   </li>

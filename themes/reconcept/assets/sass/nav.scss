@@ -110,11 +110,20 @@ nav.nav-header {
     }
   }
 
+  nav.nav-header ul.nav-logo {
+    flex-direction: row;
+    align-items: center;
+    li.nav-item {
+      width: auto;
+    }
+  }
+
   nav.nav-header {
     
     .nav-main-toggle {
       .fal {
         margin: 0 !important;
+        margin-right: 10px !important;
       }
     }
     .show-expanded {
@@ -136,7 +145,7 @@ nav.nav-header {
 }
 
 // Big screens
-@media only screen and (min-width: $breakpoint-large) {
+@media only screen and (min-width: $breakpoint-large+1px) {
   nav.nav-header {
 
     .main-header-bar {

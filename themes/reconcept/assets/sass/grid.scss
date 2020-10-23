@@ -28,11 +28,11 @@ $gutter: 30px;
   width: 100vw;
   margin: 0 auto;
   // border: 1px solid red;
-  @media only screen and (min-width: $breakpoint-small) {
+  @media only screen and (min-width: $breakpoint-small+1px) {
     width: 80vw;
   }
 
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (min-width: $breakpoint-large+1px) {
     width: 75vw;
     max-width: $breakpoint-large;
   }
@@ -75,7 +75,7 @@ $gutter: 30px;
 }
 
 .hidden-large {
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (min-width: $breakpoint-large+1px) {
     display: none !important;
   }
 }
