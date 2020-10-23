@@ -1,0 +1,39 @@
+.tile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  border-radius: $br;
+  transition: background-color .3s, color .3s;
+  width: 100%;
+  overflow: hidden;
+  
+  &.clickable {
+    cursor: pointer;
+    &:hover {
+      background: $col-brand;
+      color: white;
+    }
+  }
+
+  .icon {
+    background: white;
+    width: 65px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    border-right: 1px solid $col-lines;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .label {
+    padding: 10px;
+    // word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

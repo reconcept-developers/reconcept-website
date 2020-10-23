@@ -94,18 +94,21 @@ section {
   }
 }
 
-.logo-grid {
+.grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background: white;
-  border-radius: $br;
   width: 100%;
+
+  &.logo-grid {
+    background: white;
+    border-radius: $br;
+  }
 
   // mobile
   > .grid-cell {
-    padding: 30px;
-    flex: 0 0 50%;
+    padding: 15px;
+    width: 50%;
     text-align: center;
     img {
       max-width: 150px;
@@ -115,15 +118,15 @@ section {
   // medium
   @media only screen and (min-width: $breakpoint-small) {
     &.three-columns > .grid-cell {
-      flex-basis: 33%;
+      width: 50%;
     }
   
     &.four-columns > .grid-cell {
-      flex-basis: 33%;
+      width: 33%;
     }
   
     &.five-columns > .grid-cell {
-      flex-basis: 33%;
+      width: 33%;
       // in a five column layout displayed on medium screen we make thirds
       // the nice layout would be 3x3, so every tenth item would look ugly
       // we hide it
@@ -137,15 +140,15 @@ section {
   // large
   @media only screen and (min-width: $breakpoint-med) {
     &.three-columns > .grid-cell {
-      flex-basis: 33%;
+      width: 33%;
     }
   
     &.four-columns > .grid-cell {
-      flex-basis: 25%;
+      width: 25%;
     }
   
     &.five-columns > .grid-cell {
-      flex-basis: 20%;
+      width: 20%;
       &:nth-child(10){
         display: initial;
       }
