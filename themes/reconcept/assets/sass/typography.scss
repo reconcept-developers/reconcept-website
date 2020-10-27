@@ -96,6 +96,11 @@ span {
       padding: 10px;
     }
 
+    &.gaia {
+      color: white;
+      background-color: $col-gaia;
+    }
+
     &.blue {
       color: white;
       background-color: $c-blue;

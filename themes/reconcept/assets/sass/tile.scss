@@ -4,16 +4,23 @@
   align-items: center;
   background: white;
   border-radius: $br;
+  min-height: 64px;
   transition: background-color .3s, color .3s;
   width: 100%;
   overflow: hidden;
+  border: 1px solid $col-lines;
   
   &.clickable {
     cursor: pointer;
+    text-decoration: none;
     &:hover {
       background: $col-brand;
       color: white;
     }
+  }
+
+  &.center {
+    justify-content: center;
   }
 
   .icon {

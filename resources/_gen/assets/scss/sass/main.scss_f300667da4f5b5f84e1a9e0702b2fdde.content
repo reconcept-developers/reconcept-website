@@ -7283,6 +7283,12 @@ span.highlight {
   span.highlight.padded {
     display: inline-block;
     padding: 10px; }
+  h1.highlight.gaia,
+  h2.highlight.gaia,
+  h3.highlight.gaia,
+  span.highlight.gaia {
+    color: white;
+    background-color: #00bcbd; }
   h1.highlight.blue,
   h2.highlight.blue,
   h3.highlight.blue,
@@ -8097,6 +8103,7 @@ info-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     padding: 30px; }
     .photo-box .overlay p {
@@ -8244,14 +8251,19 @@ section.footer ul {
   align-items: center;
   background: white;
   border-radius: 2px;
+  min-height: 64px;
   transition: background-color .3s, color .3s;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px solid #e8e9eb; }
   .tile.clickable {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .tile.clickable:hover {
       background: #007bc0;
       color: white; }
+  .tile.center {
+    justify-content: center; }
   .tile .icon {
     background: white;
     width: 65px;
