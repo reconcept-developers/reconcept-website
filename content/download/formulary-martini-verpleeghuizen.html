@@ -1,0 +1,27 @@
+---
+title: "Download de Reconcept Richtlijnen-app"
+description: "Download de Reconcept Richtlijnen-app"
+---
+
+<script type="text/javascript">
+
+  // redirect method
+  function redirectToDownloadPage(){
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // ios
+    var downloadURL = 'https://itunes.apple.com/us/app/formularium-verpleeghuizen/id1450373665?mt=8';
+    if (/android/i.test(userAgent)) {
+      // android
+      downloadURL = 'https://play.google.com/store/apps/details?id=nl.reconcept.formularium.martiniverpleeghuizen';
+    }
+    
+
+    // navigate
+    window.location.href = downloadURL;
+
+  }
+
+  redirectToDownloadPage();
+
+</script>

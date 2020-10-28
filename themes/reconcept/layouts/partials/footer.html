@@ -42,17 +42,17 @@
       
       <div class="col">
         <b>
-          Meer informatie
-        </b>
-        <ul>
-          {{- partial "footer-nav-items" .Site.Menus.secondary -}}
-        </ul>
-
-        <b>
           Werken bij Reconcept
         </b>
         <ul>
           {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "vacancies") -}}
+        </ul>
+
+        <b>
+          Meer informatie
+        </b>
+        <ul>
+          {{- partial "footer-nav-items" .Site.Menus.secondary -}}
         </ul>
       </div>
       

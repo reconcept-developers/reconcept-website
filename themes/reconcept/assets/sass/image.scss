@@ -12,3 +12,23 @@ img.logo {
   height: 1em;
   vertical-align: text-bottom;
 }
+
+.screenshot {
+  &.app {
+
+    // undo bottom padding of container
+    margin-bottom: -30px;
+    // we only want to show the top part of the phone
+    max-height: 600px;
+    overflow: hidden;
+    
+    img {
+      margin: 0 auto;
+      max-width: 400px;
+      border-radius: 30px;
+      @include shadow();
+      // border: 3px solid $c-gray-darker;
+      display: block;
+    }
+  }
+}

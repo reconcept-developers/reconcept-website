@@ -7453,6 +7453,17 @@ img.logo {
   height: 1em;
   vertical-align: text-bottom; }
 
+.screenshot.app {
+  margin-bottom: -30px;
+  max-height: 600px;
+  overflow: hidden; }
+  .screenshot.app img {
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+    display: block; }
+
 ul:not(.list) {
   list-style: none;
   padding: 0; }
@@ -7569,6 +7580,13 @@ a.button {
   button.button.purple.transparent:not(.basic),
   a.button.purple.transparent:not(.basic) {
     color: #54288b; }
+  button.button.white:not(.basic):not(.transparent),
+  a.button.white:not(.basic):not(.transparent) {
+    background-color: white;
+    color: gray; }
+  button.button.white.transparent:not(.basic),
+  a.button.white.transparent:not(.basic) {
+    color: gray; }
   button.button.basic,
   a.button.basic {
     border: 1px solid #e8e9eb;
@@ -7634,6 +7652,11 @@ a.button {
     border: 1px solid #54288b;
     background-color: white;
     color: #54288b; }
+  button.button.basic.white,
+  a.button.basic.white {
+    border: 1px solid white;
+    background-color: white;
+    color: gray; }
   button.button:hover,
   a.button:hover {
     background-color: #006fad !important;
@@ -7694,6 +7717,10 @@ a.button {
   a.button.purple:hover {
     background-color: #4c247d !important;
     color: white !important; }
+  button.button.white:hover,
+  a.button.white:hover {
+    background-color: #e6e6e6 !important;
+    color: gray !important; }
   button.button.selected,
   a.button.selected {
     background-color: #006fad !important;
@@ -7746,6 +7773,10 @@ a.button {
   a.button.purple.selected {
     background-color: #4c247d !important;
     color: white !important; }
+  button.button.white.selected,
+  a.button.white.selected {
+    background-color: #e6e6e6 !important;
+    color: gray !important; }
   button.button[disabled], button.button[disabled]:hover, button.button.disabled, button.button.disabled:hover,
   a.button[disabled],
   a.button[disabled]:hover,

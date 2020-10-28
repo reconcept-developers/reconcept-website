@@ -1,0 +1,26 @@
+---
+title: "Download de Portfolio App"
+description: "Download de Portfolio App"
+---
+
+<script type="text/javascript">
+
+  // redirect method
+  function redirectToDownloadPage(){
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // ios
+    var downloadURL = 'https://itunes.apple.com/nl/app/reconcept-portfolio/id1460775077';
+    if (/android/i.test(userAgent)) {
+      // android
+      downloadURL = 'https://play.google.com/store/apps/details?id=nl.reconcept.portfolio.universal';
+    }
+
+    // navigate
+    window.location.href = downloadURL;
+
+  }
+
+  redirectToDownloadPage();
+
+</script>

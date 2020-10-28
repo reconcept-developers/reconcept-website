@@ -10,7 +10,8 @@ $colors-list: (
   'progress',
   'active',
   'gaia',
-  'purple'
+  'purple',
+  'white'
 );
 $colors-list-vars: (
   $c-blue,
@@ -24,7 +25,8 @@ $colors-list-vars: (
   $col-progress,
   $col-active,
   $col-gaia,
-  $col-purple
+  $col-purple,
+  white
 );
 
 @function color-lighter($color) {
