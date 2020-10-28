@@ -65,6 +65,33 @@ menu:
     </div>
   </section>
 
+  <section class="spaced center padded">
+    <div class="row">
+      <div class="col">
+        <h2>
+          Samenwerken met Reconcept
+        </h2>
+        <p>
+          We breiden het platform continu uit met nuttige tools voor artsen.
+          Dit doen we door samen te werken met zorginstellingen, specialisten en bedrijven.
+          Heb je een idee dat je een keer met ons wilt bespreken? 
+          Laat gerust je gegevens achter, dan bellen we je terug.
+        </p>
+
+        <a
+          href="/partnerships"
+          class="green button"
+        >
+          <span>
+            Lees meer over Samenwerken met Reconcept
+          </span>
+          <span class="fal fa-angle-right"></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <section class="spaced">
     <div class="row">
       <div class="col">
@@ -96,23 +123,17 @@ menu:
     </div>
   </section>
 
-  <section class="spaced center green padded">
-    <div class="row">
-      <div class="col">
-        <h2>
-          Zelf een goed idee?
-        </h2>
-        <p>
-          We breiden het platform continu uit met nuttige tools voor artsen.
-          Dit doen we door samen te werken met zorginstellingen, specialisten en bedrijven.
-          Heb je een idee dat je een keer met ons wilt bespreken? Laat gerust je gegevens achter, dan bellen we je terug.
-        </p>
-
-        {{% contact-form %}}
-
-      </div>
-    </div>
-  </section>
+  {{< section-contact-form >}}
+    <h2>
+      Bel me terug
+    </h2>
+    <p>
+      Kun je het antwoord op je vraag niet vinden op onze <a href="/support" target="_blank">support website</a>
+      of heb je een andere vraag?
+      Laat hier je gegevens achter, dan nemen we zo snel mogelijk contact met je op:
+    </p>
+    {{< contact-form >}}
+  {{</ section-contact-form >}}
 
   <section class="spaced center">
     <div class="row">

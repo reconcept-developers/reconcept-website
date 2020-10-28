@@ -45,6 +45,9 @@ section {
   &.yellow {
     background-color: $c-yellow;
   }
+  &.gray {
+    background-color: $col-lines;
+  }
   
   &.dark, &.blue, &.green, &.yellow, &.blue-bright {
     color: $col-text-light;

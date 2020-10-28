@@ -7360,6 +7360,9 @@ section.green {
 section.yellow {
   background-color: #fcba04; }
 
+section.gray {
+  background-color: #e8e9eb; }
+
 section.dark, section.blue, section.green, section.yellow, section.blue-bright {
   color: #e8e9eb; }
   section.dark a, section.blue a, section.green a, section.yellow a, section.blue-bright a {
