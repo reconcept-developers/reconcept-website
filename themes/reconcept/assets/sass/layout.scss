@@ -106,6 +106,13 @@ section {
   &.logo-grid {
     background: white;
     border-radius: $br;
+    img {
+      transition: filter 2s;
+      filter: grayscale(1);
+    }
+    .grid-cell:hover img {
+      filter: grayscale(0);
+    }
   }
 
   // mobile
