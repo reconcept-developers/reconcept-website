@@ -43,9 +43,10 @@ $gutter: 30px;
   flex-wrap: wrap;
   margin-left: -.5*$gutter;
   margin-right: -.5*$gutter;
-  // vertical
-  // align-items: center;
-  // border: 1px solid green;
+
+  &:not(:last-child){
+    margin-bottom: $gutter;
+  }
 
   .col {
     flex: 1 1;
