@@ -7161,7 +7161,7 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background: #fafbfb;
+  background: white;
   color: #2d2d2a;
   overflow-x: hidden; }
 
@@ -7392,14 +7392,6 @@ section .row.alternating {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%; }
-  .grid.logo-grid {
-    background: white;
-    border-radius: 2px; }
-    .grid.logo-grid img {
-      transition: filter 2s;
-      filter: grayscale(1); }
-    .grid.logo-grid .grid-cell:hover img {
-      filter: grayscale(0); }
   .grid > .grid-cell {
     padding: 15px;
     width: 50%;
@@ -7456,7 +7448,7 @@ img.avatar {
   width: 50px;
   height: 50px; }
 
-img.logo {
+img.reconcept-logo {
   height: 1em;
   vertical-align: text-bottom; }
 
@@ -7468,6 +7460,12 @@ img.w-50 {
   @media only screen and (min-width: 961px) {
     img.w-50 {
       width: 50%; } }
+img.logo {
+  transition: filter 2s;
+  filter: grayscale(1); }
+  img.logo:hover {
+    filter: grayscale(0); }
+
 .screenshot.app {
   margin-bottom: -30px;
   max-height: 600px;

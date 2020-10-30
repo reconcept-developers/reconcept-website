@@ -103,18 +103,6 @@ section {
   justify-content: space-evenly;
   width: 100%;
 
-  &.logo-grid {
-    background: white;
-    border-radius: $br;
-    img {
-      transition: filter 2s;
-      filter: grayscale(1);
-    }
-    .grid-cell:hover img {
-      filter: grayscale(0);
-    }
-  }
-
   // mobile
   > .grid-cell {
     padding: 15px;

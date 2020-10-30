@@ -8,7 +8,7 @@ img.avatar {
   height: 50px;
 }
 
-img.logo {
+img.reconcept-logo {
   height: 1em;
   vertical-align: text-bottom;
 }
@@ -22,6 +22,14 @@ img.w-50 {
 
   @media only screen and (min-width: $breakpoint-med+1px) {
     width: 50%;
+  }
+}
+
+img.logo {
+  transition: filter 2s;
+  filter: grayscale(1);
+  &:hover {
+    filter: grayscale(0);
   }
 }
 
