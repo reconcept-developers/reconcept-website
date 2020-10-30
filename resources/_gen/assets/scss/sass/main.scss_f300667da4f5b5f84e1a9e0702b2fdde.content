@@ -7460,6 +7460,14 @@ img.logo {
   height: 1em;
   vertical-align: text-bottom; }
 
+img.w-100 {
+  width: 100%; }
+
+img.w-50 {
+  width: 100%; }
+  @media only screen and (min-width: 961px) {
+    img.w-50 {
+      width: 50%; } }
 .screenshot.app {
   margin-bottom: -30px;
   max-height: 600px;
