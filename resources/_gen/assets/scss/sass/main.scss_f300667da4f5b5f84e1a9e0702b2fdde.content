@@ -7185,12 +7185,16 @@ body {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px; }
+  .row.v-center {
+    align-items: center; }
   .row:not(:last-child) {
     margin-bottom: 30px; }
   .row .col {
     flex: 1 1;
     padding: 0 15px; }
-
+  @media only screen and (min-width: 961px) {
+    .row .col.flex-0 {
+      flex: 0 0 auto; } }
 @media only screen and (max-width: 960px) {
   .row {
     flex-wrap: wrap; }
@@ -8345,3 +8349,17 @@ section.footer ul {
 
 .video.larger iframe {
   height: 400px; }
+
+.cookie-bar {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #fafbfb; }
+  @media only screen and (max-width: 960px) {
+    .cookie-bar {
+      text-align: center; } }
+  .cookie-bar.dismissed {
+    display: none; }

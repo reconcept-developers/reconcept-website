@@ -1,0 +1,19 @@
+.cookie-bar {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // height: 40px;
+  padding: 10px;
+  background: $col-bg;
+
+  @media only screen and (max-width: $breakpoint-med) {
+    text-align: center;
+  }
+
+  &.dismissed {
+    display: none;
+  }
+
+}

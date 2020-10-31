@@ -2,6 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body class="{{ .Param "bodyClass" }}">
+        {{- partial "cookies.html" . -}}
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}

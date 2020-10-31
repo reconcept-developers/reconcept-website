@@ -44,6 +44,10 @@ $gutter: 30px;
   margin-left: -.5*$gutter;
   margin-right: -.5*$gutter;
 
+  &.v-center {
+    align-items: center;
+  }
+
   &:not(:last-child){
     margin-bottom: $gutter;
   }
@@ -52,6 +56,12 @@ $gutter: 30px;
     flex: 1 1;
     // border: 1px solid blue;
     padding: 0 .5*$gutter;
+  }
+  .col.flex-0 {
+
+    @media only screen and (min-width: $breakpoint-med+1px) {
+      flex: 0 0 auto;
+    }
   }
 
 }
