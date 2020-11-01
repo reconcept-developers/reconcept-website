@@ -13,12 +13,12 @@
   <link rel="apple-touch-icon" href="/favicon.png" />
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:site_name" />
-  <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:title" />
+  <meta content="{{ .Site.Title }}" property="og:site_name" />
+  <meta content="{{.Title}} &middot; {{ .Site.Title }}" property="og:title" />
   <meta content="website" property="og:type" />
-  <meta content="{{ .Site.BaseURL }}" property="og:url" />
+  <meta content="{{ .Permalink }}" property="og:url" />
   <meta content="{{ .Description }}" property="og:description" />
-  <meta content="{{ .Site.BaseURL }}{{ .Param "featured_image" }}" property="og:image"/>
+  <meta content="{{ .Site.BaseURL }}{{ .Site.Param "featured_image" }}" property="og:image"/>
   
   {{ $script := resources.Get "scripts/main.js" }}
   {{ $built := $script | js.Build "main.js" }}

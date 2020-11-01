@@ -11,9 +11,9 @@ class SubNavigation {
     /**
      * Subnavigation toggle click
      **/
-    this.$subnavigationToggle.mouseenter((e) => {
-      this.toggleSubnavigation(e, true);
-    });
+    // this.$subnavigationToggle.mouseenter((e) => {
+    //   this.toggleSubnavigation(e, true);
+    // });
 
     this.$subnavigationToggle.on("click", (e) => {
       e.preventDefault();
@@ -21,9 +21,9 @@ class SubNavigation {
       this.toggleSubnavigation(e, !isToggled);
     });
 
-    this.$subnavigationEl.mouseleave((e) => {
-      this.toggleSubnavigation(e, false);
-    });
+    // this.$subnavigationEl.mouseleave((e) => {
+    //   this.toggleSubnavigation(e, false);
+    // });
 
     // any document click hides all subnavs
     $(document).on("click", (e) => {
@@ -38,6 +38,7 @@ class SubNavigation {
     e.preventDefault();
     e.stopPropagation();
 
+    this.hideAllSubnav();
     var $target = $(e.currentTarget);
     var $subNav = this.getSubnav($target);
     $subNav.toggleClass("expanded", show);

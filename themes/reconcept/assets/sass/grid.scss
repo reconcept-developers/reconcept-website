@@ -27,12 +27,13 @@ $gutter: 30px;
 .container {
   width: 100vw;
   margin: 0 auto;
+  padding: 0 $gutter;
   // border: 1px solid red;
-  @media only screen and (min-width: $breakpoint-small+1px) {
+  @media only screen and (min-width: $breakpoint-small) {
     width: 80vw;
   }
 
-  @media only screen and (min-width: $breakpoint-large+1px) {
+  @media only screen and (min-width: $breakpoint-large) {
     width: 75vw;
     max-width: $breakpoint-large;
   }
@@ -54,19 +55,18 @@ $gutter: 30px;
 
   .col {
     flex: 1 1;
-    // border: 1px solid blue;
     padding: 0 .5*$gutter;
   }
   .col.flex-0 {
 
-    @media only screen and (min-width: $breakpoint-med+1px) {
+    @media only screen and (min-width: $breakpoint-med) {
       flex: 0 0 auto;
     }
   }
 
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-med-max) {
   .row {
     flex-wrap: wrap;
     .col {
@@ -80,13 +80,13 @@ $gutter: 30px;
 
 // utility
 .hidden-sm {
-  @media only screen and (max-width: $breakpoint-small) {
+  @media only screen and (max-width: $breakpoint-small-max) {
     display: none !important;
   }
 }
 
 .hidden-large {
-  @media only screen and (min-width: $breakpoint-large+1px) {
+  @media only screen and (min-width: $breakpoint-large) {
     display: none !important;
   }
 }

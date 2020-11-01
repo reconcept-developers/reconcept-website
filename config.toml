@@ -2,6 +2,8 @@ baseURL = "http://reconcept-new.surge.sh/"
 languageCode = "en-us"
 title = "Reconcept"
 theme = "reconcept"
+[params]
+  featured_image = "featured-image.jpg"
 
 [module]
   [[module.mounts]]

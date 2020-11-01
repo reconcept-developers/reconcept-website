@@ -20,7 +20,7 @@ img.w-100 {
 img.w-50 {
   width: 100%;
 
-  @media only screen and (min-width: $breakpoint-med+1px) {
+  @media only screen and (min-width: $breakpoint-med) {
     width: 50%;
   }
 }

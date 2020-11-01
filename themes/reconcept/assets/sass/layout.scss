@@ -30,6 +30,14 @@ section {
       margin-top: 0;
     }
   }
+
+  &.padded-v {
+    padding: $vertical-padding 0;
+    h2, h3 {
+      margin-top: 0;
+    }
+  }
+
   &.dark {
     background-color: $col-bg-darker;
   }
@@ -80,7 +88,7 @@ section {
     }
   }
   // on small screens, align the media in the last column center
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-med-max) {
     .row.alternating {
       .col:last-child:not(:first-child){
         text-align: center;

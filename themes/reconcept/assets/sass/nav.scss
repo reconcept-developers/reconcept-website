@@ -85,8 +85,11 @@ nav.nav-header {
         nav {
           display: initial;
         }
-        .nav-link {
+        >.nav-link {
           color: $col-brand;
+          background-color: $col-brand-bg;
+          padding-bottom: (20px)-(2px);
+          border-bottom: 2px solid $col-brand;
           .icon {
             transform: rotate(180deg);
           }
@@ -97,13 +100,15 @@ nav.nav-header {
 }
 
 // Mobile only
-@media only screen and (max-width: $breakpoint-large) {
+@media only screen and (max-width: $breakpoint-large-max) {
   nav.nav-header ul.nav-main {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 64px;
+    bottom: 0;
     left: 0;
     width: 100%;
+    overflow-y: auto;
     background: white;
     .col {
       padding: 0;
@@ -145,7 +150,7 @@ nav.nav-header {
 }
 
 // Big screens
-@media only screen and (min-width: $breakpoint-large+1px) {
+@media only screen and (min-width: $breakpoint-large) {
   nav.nav-header {
 
     .main-header-bar {
@@ -192,7 +197,8 @@ nav.nav-header {
               flex-shrink: 0;
 
               a.nav-link {
-                padding: 50px 20px;
+                padding: 30px 20px;
+                height: 100%;
 
                 .title {
                   display: block;
