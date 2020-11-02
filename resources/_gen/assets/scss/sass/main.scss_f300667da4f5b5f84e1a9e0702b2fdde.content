@@ -7477,9 +7477,10 @@ img.logo {
     filter: grayscale(0); }
 
 .screenshot.app {
-  margin-bottom: -30px;
-  max-height: 600px;
-  overflow: hidden; }
+  margin-bottom: -30px; }
+  .screenshot.app.max-height {
+    overflow: hidden;
+    max-height: 600px; }
   .screenshot.app img {
     margin: 0 auto;
     max-width: 400px;
