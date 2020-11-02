@@ -7487,6 +7487,19 @@ img.logo {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
     display: block; }
 
+img.vw-100 {
+  max-width: none;
+  width: 100vw;
+  position: relative;
+  left: -30px; }
+  @media only screen and (min-width: 540px) {
+    img.vw-100 {
+      margin-left: -10vw; } }
+  @media only screen and (min-width: 960px) {
+    img.vw-100 {
+      max-width: 100%;
+      left: 0;
+      margin: 0; } }
 ul:not(.list) {
   list-style: none;
   padding: 0; }

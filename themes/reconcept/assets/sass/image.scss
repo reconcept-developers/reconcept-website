@@ -52,3 +52,22 @@ img.logo {
     }
   }
 }
+
+// use 100% of the view width even outside column
+// except on really large screens
+img.vw-100 {
+  max-width: none;
+  width: 100vw;
+  position: relative;
+  left: -$gutter;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    margin-left: -10vw;
+  }
+
+  @media only screen and (min-width: $breakpoint-med) {
+    max-width: 100%;
+    left: 0;
+    margin: 0;
+  }
+}
