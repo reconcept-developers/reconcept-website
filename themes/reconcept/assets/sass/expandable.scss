@@ -1,0 +1,11 @@
+.expandable {
+
+  &:not(.expanded) .expandable-content {
+    display: none;
+  }
+
+  .expandable-content {
+    margin-top: 15px;
+  }
+
+}

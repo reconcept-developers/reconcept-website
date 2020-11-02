@@ -8358,6 +8358,12 @@ section.footer ul {
     text-overflow: ellipsis;
     overflow: hidden; }
 
+.expandable:not(.expanded) .expandable-content {
+  display: none; }
+
+.expandable .expandable-content {
+  margin-top: 15px; }
+
 .video iframe {
   width: 100%;
   height: 300px; }
