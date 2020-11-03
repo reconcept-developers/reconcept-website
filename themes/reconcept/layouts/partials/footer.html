@@ -2,46 +2,6 @@
 
   <div class="container">
     <div class="row padded">
-      <div class="col">
-        <img class="reconcept-logo" src="/svg/logo-white.svg"/>
-
-        <p class="smaller">
-          &copy; {{ now.Format "2006"}} Reconcept
-        </p>
-
-        <ul class="icon-list">
-          <li>
-            <span class="fab fa-linkedin"></span>
-            <a
-              href="https://www.linkedin.com/company/reconcept-it/"
-              target="_blank"
-              >Volg ons op LinkedIn</a
-            >
-          </li>
-        </ul>
-
-        <a
-          href="https://portfolio.reconcept.nl"
-          target="_blank"
-          class="green button"
-          >
-          <span class="fal fa-lock"></span>
-          <span>Log in</span>
-        </a>
-
-        <br/>
-        <br/>
-
-        <a
-          href="/support"
-          target="_blank"
-          class="white button"
-          >
-          <span class="fal fa-question-circle"></span>
-          <span>Support</span>
-        </a>
-
-      </div>
 
       <div class="col">
         <b>
@@ -59,6 +19,13 @@
         <ul>
           {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "applications") -}}
         </ul>
+
+        <b>
+          Producteigenschappen
+        </b>
+        <ul>
+          {{- partial "footer-nav-items" .Site.Menus.features -}}
+        </ul>
       </div>
       
       <div class="col">
@@ -74,6 +41,62 @@
         </b>
         <ul>
           {{- partial "footer-nav-items" .Site.Menus.secondary -}}
+        </ul>
+      </div>
+
+      <div class="col">
+        <img class="reconcept-logo" src="/svg/logo-white.svg"/>
+
+        <ul class="icon-list">
+          <li>
+            <span class="fab fa-linkedin"></span>
+            <a
+              href="https://www.linkedin.com/company/reconcept-it/"
+              target="_blank"
+              >Volg ons op LinkedIn</a
+            >
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+
+            <a
+              href="https://portfolio.reconcept.nl"
+              target="_blank"
+              class="green button"
+              >
+              <span class="fal fa-lock"></span>
+              <span>Log in</span>
+            </a>
+
+          </li>
+          <li>
+
+            <a
+              href="/support"
+              target="_blank"
+              class="white button"
+              >
+              <span class="fal fa-question-circle"></span>
+              <span>Support</span>
+            </a>
+        
+          </li>
+          <li>
+            
+            <a href="https://itunes.apple.com/nl/app/reconcept-portfolio/id1460775077" target="_blank">
+              <img class="store-logo" src="/integrations/app-store.png"/>
+            </a>
+
+          </li>
+          <li>
+
+            <a href="https://play.google.com/store/apps/details?id=nl.reconcept.portfolio.universal" target="_blank">
+              <img class="store-logo" src="/integrations/play-store.png"/>
+            </a>
+
+          </li>
         </ul>
       </div>
       

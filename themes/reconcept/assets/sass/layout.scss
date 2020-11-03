@@ -105,6 +105,13 @@ section {
   }
 }
 
+.col {
+  &.padded {
+    padding-top: .5*$vertical-padding;
+    padding-bottom: .5*$vertical-padding;
+  }
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;

@@ -7397,6 +7397,10 @@ section .row.alternating {
   padding-top: 30px;
   padding-bottom: 30px; }
 
+.col.padded {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -7470,11 +7474,15 @@ img.w-50 {
   @media only screen and (min-width: 960px) {
     img.w-50 {
       width: 50%; } }
-img.logo {
+img.logo, img.store-logo {
   transition: filter 2s;
   filter: grayscale(1); }
-  img.logo:hover {
+  img.logo:hover, img.store-logo:hover {
     filter: grayscale(0); }
+
+img.store-logo {
+  max-width: 130px;
+  display: block; }
 
 .screenshot.app {
   margin-bottom: -30px; }
@@ -8334,7 +8342,7 @@ section.footer ul {
   section.footer ul li {
     margin-bottom: 10px; }
     section.footer ul li a {
-      opacity: .7; }
+      color: rgba(255, 255, 255, 0.7); }
 
 .tile {
   display: flex;

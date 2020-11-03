@@ -25,12 +25,16 @@ img.w-50 {
   }
 }
 
-img.logo {
+img.logo, img.store-logo {
   transition: filter 2s;
   filter: grayscale(1);
   &:hover {
     filter: grayscale(0);
   }
+}
+img.store-logo {
+  max-width: 130px;
+  display: block;
 }
 
 .screenshot {
