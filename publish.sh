@@ -6,24 +6,12 @@ then
     exit 1;
 fi
 
-echo "Deleting old publication"
-rm -rf public
-mkdir public
-git worktree prune
-rm -rf .git/worktrees/public/
-
-echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public origin/gh-pages
-
 echo "Removing existing files"
 rm -rf public/*
 
 echo "Generating site"
 hugo
 
-echo "Updating gh-pages branch"
-cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
-
-echo "Pushing to github"
-git push origin gh-pages
-#git push --all
+echo "Uploading site"
+# cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
+rsync -avzr -e "ssh -p 2509" --progress public/ reconcept@185.27.174.207:/www/reconcept-home/
