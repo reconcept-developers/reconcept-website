@@ -121,11 +121,15 @@ section {
   // mobile
   > .grid-cell {
     padding: 15px;
-    width: 50%;
+    width: 100%;
     text-align: center;
     img {
       max-width: 150px;
     }
+  }
+
+  &.min-two-columns > .grid-cell {
+    width: 50%;
   }
 
   // medium
