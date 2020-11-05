@@ -1,8 +1,24 @@
 {{ define "header" }}{{ partial "header.html" . }}{{ end }}
 {{ define "main" }}
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+<div class="container">
+  <section class="spaced">
+    <div class="alternating row">
+      <div class="col">
+        <h1>
+          <span class="highlight yellow">Sorry,</span> dit is niet de pagina die je zocht :(
+        </h1>
+        <p>
+          Het lijkt erop dat de pagina die je zocht niet bestaat. Hopelijk kun je in de rest van de website vinden wat je zoekt.
+          Zo niet, dan kun je altijd contact met ons opnemen.
+        </p>
+        <a class="blue button" href="{{ "/" | relURL }}">Naar de homepage</a>
+
+      </div>
+      <div class="col">
+        <img class="w-100" src="/svg/support.svg"/>
+      </div>
+    </div>
+  </section>
+</div>
+
 {{ end }}
