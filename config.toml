@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Reconcept"
 theme = "reconcept"
 [params]
-  featured_image = "featured-image.jpg"
+  featured_image = "featured_image.jpg"
 
 [module]
   [[module.mounts]]
