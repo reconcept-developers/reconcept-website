@@ -7,7 +7,7 @@
   </div>
   
   <div class="row hide-submitted">
-    <input type="hidden" name="email" placeholder="Uw e-mailadres" value="info@reconcept.nl"/>
+    <input type="hidden" name="email" placeholder="Uw e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
     <input type="hidden" name="subject" placeholder="Onderwerp" value="Bel-me-terug {{ .Page.Name }}"/>
     <div class="col">
       <input type="text" name="name" placeholder="Je naam" required/>
