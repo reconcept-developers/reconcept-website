@@ -1,7 +1,5 @@
 <head>
   <title>{{.Title}} &middot; {{ .Site.Title }}</title>
-  {{ $sass := resources.Get "sass/main.scss" }} {{ $style := $sass | resources.ToCSS }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +20,14 @@
   <meta content="{{ .Site.BaseURL }}{{ .Site.Param "featured_image" }}" property="og:image"/>
   
   {{ $script := resources.Get "scripts/main.js" }}
-  {{ $built := $script | js.Build "main.js" }}
+  {{ $built := $script | js.Build "main.js" | minify }}
   <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+  
+  <!-- inline css -->
+  {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+  <style>
+    {{ $style.Content | safeCSS }}
+  </style>
   
 </head>
