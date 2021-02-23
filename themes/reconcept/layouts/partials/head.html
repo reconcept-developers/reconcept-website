@@ -17,7 +17,7 @@
   <meta content="website" property="og:type" />
   <meta content="{{ .Permalink }}" property="og:url" />
   <meta content="{{ .Description }}" property="og:description" />
-  <meta content="{{ .Site.BaseURL }}{{ .Site.Param "featured_image" }}" property="og:image"/>
+  <meta content="{{ .Site.BaseURL }}{{ if isset .Params "featured_image" }}{{ .Params.featured_image }}{{ else }}{{ .Site.Param "featured_image" }}{{ end }}" property="og:image"/>
   
   {{ $script := resources.Get "scripts/main.js" }}
   {{ $built := $script | js.Build "main.js" | minify }}
