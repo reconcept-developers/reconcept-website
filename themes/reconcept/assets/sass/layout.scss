@@ -58,7 +58,10 @@ section {
   }
   
   &.dark, &.blue, &.green, &.yellow, &.blue-bright {
-    color: $col-text-light;
+    color: white;
+    p {
+      color: rgba(white, .9);
+    }
     a {
       color: white;
     }

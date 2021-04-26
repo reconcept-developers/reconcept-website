@@ -13,6 +13,10 @@ img.reconcept-logo {
   vertical-align: text-bottom;
 }
 
+img.shadow {
+  @include shadow;
+}
+
 img.w-100 {
   width: 100%;
 }
@@ -23,6 +27,18 @@ img.w-50 {
   @media only screen and (min-width: $breakpoint-med) {
     width: 50%;
   }
+}
+
+img.w-75 {
+  width: 100%;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 75%;
+  }
+}
+
+img.max-width {
+  max-width: 300px;
 }
 
 img.logo, img.store-logo {
