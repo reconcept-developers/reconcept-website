@@ -18,7 +18,11 @@
                   <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                     <a class="nav-link" href="{{ .URL }}">
                       <span class="title">
+                        {{ if .Page.Params.Menutitle }} 
+                        {{ .Page.Params.Menutitle }} 
+                        {{ else }} 
                         {{ .Name }}
+                        {{ end }}
                       </span>
                       <span class="description">
                         {{ .Page.Description }}
