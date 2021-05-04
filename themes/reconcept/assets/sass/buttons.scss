@@ -81,7 +81,7 @@ a.button {
 
   &.big {
     padding: 0 22px;
-    height: 1.5 * $button-height;
+    min-height: 1.5 * $button-height;
     font-size: 1.1em;
   }
 
