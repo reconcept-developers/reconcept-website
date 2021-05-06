@@ -44,7 +44,7 @@ section {
   &.blue {
     background-color: $col-brand;
   }
-  &.blue-bright {
+  &.bright-blue {
     background-color: $c-blue-bright;
   }
   &.green {
@@ -57,7 +57,7 @@ section {
     background-color: $col-lines;
   }
   
-  &.dark, &.blue, &.green, &.yellow, &.blue-bright {
+  &.dark, &.blue, &.green, &.yellow, &.bright-blue {
     color: white;
     p {
       color: rgba(white, .9);
@@ -159,6 +159,11 @@ section {
 
   // large
   @media only screen and (min-width: $breakpoint-med) {
+
+    &.two-columns > .grid-cell {
+      width: 50%;
+    }
+    
     &.three-columns > .grid-cell {
       width: 33%;
     }
