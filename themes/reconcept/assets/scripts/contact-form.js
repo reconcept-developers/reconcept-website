@@ -32,7 +32,7 @@ class ContactForm {
     });
 
     // ads analytics
-    gtag_report_conversion(location.href);
+    gtag_report_conversion();
 
     return false;
   }
