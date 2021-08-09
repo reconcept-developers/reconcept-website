@@ -19,10 +19,6 @@ class ContactForm {
 
   // Contact form
   submitContactForm() {
-    // ads analytics
-    // gtag("event", "conversion", {
-    //   send_to: "AW-593897330/9XqPCMyNrt0BEPLOmJsC",
-    // });
 
     let serialized = this.$form.serialize();
 
@@ -34,6 +30,9 @@ class ContactForm {
         .querySelector("[js-contact-form-submit]")
         .setAttribute("disabled", "disabled");
     });
+
+    // ads analytics
+    gtag_report_conversion(location.href);
 
     return false;
   }
