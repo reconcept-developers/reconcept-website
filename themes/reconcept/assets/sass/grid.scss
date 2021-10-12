@@ -9,7 +9,8 @@ body {
   padding: 0;
   left: 0;
   top: 0;
-  font-size: 100%;
+  // font-size: 100%;
+  font-size: $font-size-default;
   background: white;
   color: $col-text-primary;
   overflow-x: hidden;
