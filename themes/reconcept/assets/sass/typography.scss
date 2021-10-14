@@ -68,7 +68,7 @@ p, ul.list {
 
   li {
     line-height: inherit;
-    margin-bottom: .5em;
+    margin-bottom: .2em;
     list-style: none;
 
     &::before {
@@ -99,6 +99,7 @@ a {
 h1,
 h2,
 h3,
+a,
 span {
   &.highlight {
 

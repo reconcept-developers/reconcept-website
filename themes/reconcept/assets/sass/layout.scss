@@ -71,6 +71,27 @@ section {
     align-items: center;
   }
 
+  &.hero {
+    position: relative;
+    min-height: 500px;
+    padding: $vertical-padding;
+
+    .background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      background: white;
+      padding: $vertical-padding; 
+      margin-top: 400px;
+    }
+  }
+
   @media only screen and (min-width: $breakpoint-med) {
     // alternate the order of columns for each row
     // for each other row, put the first column last
