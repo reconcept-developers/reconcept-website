@@ -41,6 +41,9 @@ section {
   &.dark {
     background-color: $col-bg-darker;
   }
+  &.black {
+    background-color: black;
+  }
   &.blue {
     background-color: $col-brand;
   }
@@ -54,10 +57,11 @@ section {
     background-color: $c-yellow;
   }
   &.gray {
-    background-color: $col-lines;
+    // background-color: $col-lines;
+    background-color: $col-bg-subtle;
   }
   
-  &.dark, &.blue, &.green, &.yellow, &.bright-blue {
+  &.black, &.dark, &.blue, &.green, &.yellow, &.bright-blue {
     color: white;
     p {
       color: rgba(white, .9);
@@ -81,6 +85,9 @@ section {
       left: 0;
       top: 0;
       right: 0;
+      img {
+        width: 100%;
+      }
     }
 
     .content {
@@ -89,6 +96,14 @@ section {
       background: white;
       padding: $vertical-padding; 
       margin-top: 400px;
+
+      .content-text {
+        margin: 0 auto;
+        max-width: 800px;
+        h1 {
+          text-align: center;
+        }
+      }
     }
   }
 
