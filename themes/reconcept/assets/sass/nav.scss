@@ -39,10 +39,23 @@ nav.nav-header {
         transition: background-color .3s;
         color: $col-text-secondary;
         padding: 20px;
-        &:hover, &.active {
+        &:hover {
           color: $col-brand;
           background-color: $col-brand-bg;
         }
+      }
+
+      &.main-nav-item.active >.nav-link {
+        color: $col-brand;
+        border-bottom: 2px solid $col-brand;
+        padding-bottom: (20px)-(2px);
+      }
+    }
+
+    li.sub-nav-item {
+      &.active>a.nav-link, a.nav-link:hover {
+        color: $col-brand;
+        background-color: $col-brand-bg;
       }
     }
 

@@ -2,7 +2,7 @@
 {{ range .Site.Menus.main }}
     {{ if .HasChildren }}
 
-        <li js-subnav class="expandable nav-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+        <li js-subnav class="expandable nav-item main-nav-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
           
           <a class="nav-link" href="#" js-subnav-toggle>
               {{ .Pre }}
@@ -15,7 +15,7 @@
               <div class="container">
                 <ul>
                   {{ range .Children }}
-                  <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <li class="nav-item sub-nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                     <a class="nav-link" href="{{ .URL }}">
                       <span class="title">
                         {{ if .Page.Params.Menutitle }} 
@@ -44,7 +44,7 @@
 
     {{ else }}
 
-      <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+      <li class="nav-item main-nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
         <a class="nav-link" href="{{ .URL }}">
           {{ .Pre }}
           <span>{{ .Name }}</span>
