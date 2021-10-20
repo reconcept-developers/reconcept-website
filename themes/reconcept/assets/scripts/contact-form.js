@@ -13,20 +13,19 @@ class ContactForm {
   bindEvents() {
     this.$form.on("submit", (e) => {
       e.preventDefault();
-      this.submitContactForm();
+      this.submitContactForm(e);
     });
   }
 
   // Contact form
-  submitContactForm() {
+  submitContactForm(e) {
 
-    let serialized = this.$form.serialize();
+    let whichContactForm = e.target;
+    let serialized = $(whichContactForm).serialize();
 
     $.post("/scripts/contact_form.php", serialized, function () {
-      document
-        .querySelector("[js-contact-form]")
-        .classList.add("submitted");
-      document
+      whichContactForm.classList.add("submitted");
+      whichContactForm
         .querySelector("[js-contact-form-submit]")
         .setAttribute("disabled", "disabled");
     });
