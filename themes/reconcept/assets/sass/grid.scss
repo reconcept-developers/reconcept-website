@@ -26,9 +26,10 @@ body {
 $gutter: 30px;
 
 .container {
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 $gutter;
+  // padding: 0 $gutter;
   // border: 1px solid red;
   @media only screen and (min-width: $breakpoint-small) {
     width: 80vw;

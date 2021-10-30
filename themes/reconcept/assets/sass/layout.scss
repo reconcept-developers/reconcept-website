@@ -1,4 +1,4 @@
-$vertical-spacing: 140px;
+$vertical-spacing: 90px;
 $vertical-padding: 30px;
 
 #content {
@@ -7,6 +7,8 @@ $vertical-padding: 30px;
 }
 
 section {
+
+  padding: 0 $gutter;
   
   &.spaced {
     margin-top: $vertical-spacing;
@@ -24,7 +26,7 @@ section {
 
   // colors
   &.padded {
-    padding: $vertical-padding;
+    padding: $vertical-padding $gutter;
     border-radius: $br;
     h2, h3 {
       margin-top: 0;
@@ -32,7 +34,7 @@ section {
   }
 
   &.padded-v {
-    padding: $vertical-padding 0;
+    padding: $vertical-padding $gutter;
     h2, h3 {
       margin-top: 0;
     }
@@ -82,7 +84,9 @@ section {
   &.hero {
     position: relative;
     min-height: 500px;
-    padding: $vertical-padding;
+    padding: $gutter;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
 
     .background {
       position: absolute;
@@ -99,7 +103,7 @@ section {
       z-index: 1;
       background: white;
       padding: $vertical-padding; 
-      margin-top: 400px;
+      margin-top: 40vw;
 
       .content-text {
         margin: 0 auto;
@@ -184,7 +188,7 @@ section {
     width: 100%;
     text-align: center;
     img {
-      max-width: 150px;
+      // max-width: 150px;
     }
   }
 

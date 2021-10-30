@@ -9,6 +9,7 @@
   width: 100%;
   overflow: hidden;
   border: 1px solid $col-lines;
+  text-align: left;
   @include light-shadow();
   
   &.clickable {
