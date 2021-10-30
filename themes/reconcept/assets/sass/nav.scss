@@ -7,6 +7,7 @@ nav.nav-header {
   z-index: 2;
   top: 0;
   font-size: $font-size-small;
+  @include light-shadow();
 
   .main-header-bar {
     position: relative;

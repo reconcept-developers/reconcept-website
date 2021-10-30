@@ -71,6 +71,10 @@ section {
     }
   }
 
+  &.shadow {
+    @include shadow();
+  }
+
   .row.alternating {
     align-items: center;
   }
