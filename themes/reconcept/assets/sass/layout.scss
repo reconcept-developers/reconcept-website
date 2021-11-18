@@ -93,6 +93,7 @@ section {
       left: 0;
       top: 0;
       right: 0;
+      max-height: 500px;
       img {
         width: 100%;
       }
@@ -103,7 +104,7 @@ section {
       z-index: 1;
       background: white;
       padding: $vertical-padding; 
-      margin-top: 40vw;
+      margin-top: 30vw;
 
       .content-text {
         margin: 0 auto;
