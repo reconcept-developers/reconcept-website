@@ -79,3 +79,13 @@ form.submitted {
   }
 
 }
+
+.additional-fields {
+  display: none;
+}
+
+form.show-additional-fields {
+  .additional-fields {
+    display: block;
+  }
+}

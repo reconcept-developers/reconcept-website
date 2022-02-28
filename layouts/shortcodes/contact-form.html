@@ -6,19 +6,27 @@
     <span>Bedankt voor het doorgeven. We nemen zo snel mogelijk contact met je op!</span>
   </div>
   
-  <div class="row hide-submitted">
-    <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
-    <input type="hidden" name="subject" placeholder="Onderwerp" value="Bel-me-terug {{ .Page.Name }}"/>
-    <div class="col">
-      <input type="text" name="name" placeholder="Je naam" required/>
+  <div class="hide-submitted">
+    <div class="row">
+      <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
+      <input type="hidden" name="subject" placeholder="Onderwerp" value="Bel-me-terug {{ .Page.Name }}"/>
+      <div class="col">
+        <input type="text" name="name" placeholder="Je naam" required/>
+      </div>
+      <div class="col">
+        <input type="text" name="message" placeholder="Je telefoonnummer of e-mailadres" required/>
+      </div>
+      <div class="col">
+        <button type="submit" class="blue button full-width" js-contact-form-submit>
+          {{ default "Bel me terug!" (.Get 1) }}
+        </button>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" name="message" placeholder="Je telefoonnummer of e-mailadres" required/>
-    </div>
-    <div class="col">
-      <button type="submit" class="blue button full-width" js-contact-form-submit>
-        {{ default "Bel me terug!" (.Get 1) }}
-      </button>
+
+    <div class="row additional-fields">
+      <div class="col">
+        <textarea name="description" placeholder="Waarover wil je contact hebben?"></textarea>
+      </div>
     </div>
   </div>
 

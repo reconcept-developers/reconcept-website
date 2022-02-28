@@ -15,13 +15,23 @@ class ContactForm {
       e.preventDefault();
       this.submitContactForm(e);
     });
+
+    this.$form.on("change", (e) => {
+      console.log('change')
+      this.onFormChange(e);
+    });
   }
 
   // Contact form
+  onFormChange(e) {
+    let whichContactForm = e.target.form;
+    whichContactForm.classList.add("show-additional-fields");
+  }
+
   submitContactForm(e) {
 
     let whichContactForm = e.target;
-    let serialized = $(whichContactForm).serialize();
+    let serialized = `${$(whichContactForm).serialize()}&page_url=${encodeURIComponent(location.href)}`;
 
     $.post("/scripts/contact_form.php", serialized, function () {
       whichContactForm.classList.add("submitted");
