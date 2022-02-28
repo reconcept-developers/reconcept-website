@@ -56,7 +56,7 @@ if($description != ""){
   $message .= "Toelichting: ".$description."\n";
 }
 
-$message .= "Pagina op site: <a href=\"".$page_url."\">".$page_url."</a>";
+$message .= "Pagina op site: ".$page_url;
 
 // Send the mail
 $result = send_mailgun_mail($to_email_joined, $from_email, $from_name, $subject, $message);
