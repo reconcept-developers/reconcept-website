@@ -14,18 +14,25 @@
         <input type="text" name="name" placeholder="Je naam" required/>
       </div>
       <div class="col">
-        <input type="text" name="message" placeholder="Je telefoonnummer of e-mailadres" required/>
+        <input type="email" name="email" placeholder="Je e-mailadres" required/>
       </div>
       <div class="col">
         <button type="submit" class="blue button full-width" js-contact-form-submit>
-          {{ default "Bel me terug!" (.Get 1) }}
+          {{ default "Verzenden" (.Get 1) }}
         </button>
       </div>
     </div>
 
-    <div class="row additional-fields">
-      <div class="col">
-        <textarea name="description" placeholder="Waarover wil je contact hebben?"></textarea>
+    <div class="additional-fields">
+      <div class="row">
+        <div class="col">
+          <input type="tel" name="telephone" placeholder="Je telefoonnummer (optioneel)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <textarea name="description" placeholder="Waarover wil je contact hebben? (optioneel)"></textarea>
+        </div>
       </div>
     </div>
   </div>

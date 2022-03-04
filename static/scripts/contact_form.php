@@ -18,7 +18,7 @@ $request = [];
 parse_str($postdata, $request);
 
 // Email address
-$from_email = 'info@reconcept.nl';
+$from_email = htmlspecialchars($request['email']);
 $to_email = $request['to_email']; // required
 $to_emails = explode(",", $to_email);
 // only allow to_email if it contains @reconcept.nl
@@ -42,20 +42,19 @@ $from_name = htmlspecialchars($request['name']);
 $subject = htmlspecialchars($request['subject']); // required
 
 // Message
-$post_message = htmlspecialchars($request['message']); // required
+$post_telephone = htmlspecialchars($request['telephone']);
 $post_description = htmlspecialchars($request['description']);
 
 $message = "Bericht via Reconcept.nl contactformulier\n\n";
 $message .= "Van: ".$from_name."(".$from_email.")\n\n";
-$message .= clean_string($post_message)."\n";
+$message .= "Telefoon: ".clean_string($post_telephone).")\n\n";
 
 $description = clean_string($post_description);
-$page_url = htmlspecialchars($request['page_url']);
-
 if($description != ""){
   $message .= "Toelichting: ".$description."\n";
 }
 
+$page_url = htmlspecialchars($request['page_url']);
 $message .= "Pagina op site: ".$page_url;
 
 // Send the mail
