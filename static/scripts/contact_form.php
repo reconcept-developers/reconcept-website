@@ -47,7 +47,7 @@ $post_description = htmlspecialchars($request['description']);
 
 $message = "Bericht via Reconcept.nl contactformulier\n\n";
 $message .= "Van: ".$from_name."(".$from_email.")\n\n";
-$message .= "Telefoon: ".clean_string($post_telephone).")\n\n";
+$message .= "Telefoon: ".clean_string($post_telephone)."\n\n";
 
 $description = clean_string($post_description);
 if($description != ""){
