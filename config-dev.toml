@@ -1,0 +1,14 @@
+baseURL = "https://reconcept.nl/dev/"
+languageCode = "en-us"
+title = "Reconcept"
+theme = "reconcept"
+[params]
+  featured_image = "featured_image.jpg"
+
+[module]
+  [[module.mounts]]
+    source = "node_modules/jquery-lite/dist"
+    target = "static/jquery-lite"
+  [[module.mounts]]
+    source = "assets" 
+    target = "assets"
