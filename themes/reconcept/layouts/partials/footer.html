@@ -10,21 +10,21 @@
         <ul>
           {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "products") -}}
         </ul>
-      </div>
 
-      <div class="col">
         <b>
           Toepassingen
         </b>
         <ul>
           {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "applications") -}}
         </ul>
+      </div>
 
+      <div class="col">
         <b>
-          Producteigenschappen
+          Modules
         </b>
         <ul>
-          {{- partial "footer-nav-items" .Site.Menus.features -}}
+          {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "modules") -}}
         </ul>
       </div>
       
