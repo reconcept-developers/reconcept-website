@@ -10,7 +10,13 @@
       
       <a class="" href="{{ .URL }}">
         {{ .Pre }}
-        <span>{{ .Name }}</span>
+        <span>
+          {{ if .Page.Params.Menutitle }} 
+          {{ .Page.Params.Menutitle }} 
+          {{ else }} 
+          {{ .Name }}
+          {{ end }} 
+        </span>
       </a>
 
     </li>
