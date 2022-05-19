@@ -1,0 +1,15 @@
+<div class="grid three-columns">
+  {{ range .Site.Menus.modules }}
+  <!-- <a class="clickable padded spaced vertical tile" href="{{ .URL }}"> -->
+
+  <div class="grid-cell">
+    <span class="padded vertical tile fill" href="{{ .URL }}">
+      <div class="label">
+        {{ if .Page.Params.Menutitle }} {{ .Page.Params.Menutitle }} {{ else }}
+        {{ .Name }} {{ end }}
+      </div>
+      <div class="description">{{ .Page.Description }}</div>
+    </span>
+  </div>
+  {{ end }}
+</div>

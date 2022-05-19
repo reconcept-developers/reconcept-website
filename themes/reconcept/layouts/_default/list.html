@@ -1,1 +1,38 @@
-List
+{{ define "main" }}
+    {{ .Content }}
+    <div class="container">
+      <section class="spaced">
+        <div class="row">
+    
+          <div class="col">
+            
+            <h1>{{ .Title }}</h1>
+
+            {{ range .Page.Menus }}
+
+              {{ range .Children }}
+                
+                <a class="clickable padded spaced vertical tile" href="{{ .URL }}">
+
+                  <div class="label">
+                    {{ if .Page.Params.Menutitle }} 
+                    {{ .Page.Params.Menutitle }} 
+                    {{ else }} 
+                    {{ .Name }}
+                    {{ end }}
+                  </div>
+                  <div class="description">
+                    {{ .Page.Description }}
+                  </div>
+                </a>
+
+              {{ end }}
+
+            {{ end }}
+
+          </div>
+    
+        </div>
+      </section>
+    </div>
+{{ end }}

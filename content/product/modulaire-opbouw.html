@@ -1,9 +1,9 @@
 ---
-title: "Configuratie"
+title: "Modulaire opbouw"
 description: "Hoe je Reconcept Portfolio kunt inrichten per opleiding."
 menu:
   main:
-    parent: "products"
+    parent: "product"
     weight: 1
 ---
 
@@ -14,19 +14,33 @@ menu:
 
       <div class="col">
         <h1>
-          Reconcept is volledig te configureren <span class="blue highlight">zonder maatwerk</span>
+          Reconcept is volledig <span class="blue highlight">modulair</span> in te richten
         </h1>
         <p>
+          Als opleidingsinstelling kun je het portfolio per opleiding zo inrichten dat het optimaal aansluit op de praktijk.
         </p>
       </div>
 
       <div class="col">
-        <img class="w-100" src="/svg/security.svg"/>
+        <img class="w-100" src="/svg/modules.svg"/>
       </div>
 
     </div>
   </section>
 
+    
+  <section class="spaced">
+    <div class="row">
+
+      <div class="col center">
+        <h2>
+          Een overzicht van alle modules
+        </h2>
+        {{< available-modules >}}
+      </div>
+
+    </div>
+  </section>
 
   {{< section-contact-form >}}
     <h2>
