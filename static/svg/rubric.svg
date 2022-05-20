@@ -5,16 +5,16 @@
         <rect id="Rectangle" fill="#27BAFF" x="23" y="21" width="67" height="67" rx="1"></rect>
         <g id="rubric-bar-1" transform="translate(29.000000, 35.500000)">
             <g id="rubric-step-blank" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(56.521739, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-green" transform="translate(84.782609, 0.000000)" fill="#00A676">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(113.043478, 0.000000)" fill="#E8E9EB">
                 <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
@@ -22,33 +22,33 @@
         </g>
         <g id="rubric-bar-2" transform="translate(29.000000, 49.500000)">
             <g id="rubric-step-blank" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(56.521739, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-green" transform="translate(113.043478, 0.000000)" fill="#00A676">
                 <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(84.782609, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
         </g>
-        <g id="rubric-bar-3" transform="translate(29.000000, 63.000000)">
+        <g id="rubric-bar-3" transform="translate(29.000000, 63.500000)">
             <g id="rubric-step-blank" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(84.782609, 0.000000)" fill="#E8E9EB">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-green" transform="translate(56.521739, 0.000000)" fill="#00A676">
-                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+                <rect id="epa-button-3" x="0" y="0" width="26.5217391" height="10" rx="2"></rect>
             </g>
             <g id="rubric-step-blank" transform="translate(113.043478, 0.000000)" fill="#E8E9EB">
                 <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
