@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="185px" height="104px" viewBox="0 0 185 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>svg/rubric</title>
+    <g id="svg/rubric" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#27BAFF" x="23" y="21" width="67" height="67" rx="1"></rect>
+        <g id="rubric-bar-1" transform="translate(29.000000, 35.500000)">
+            <g id="rubric-step-blank" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(56.521739, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-green" transform="translate(84.782609, 0.000000)" fill="#00A676">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(113.043478, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+        </g>
+        <g id="rubric-bar-2" transform="translate(29.000000, 49.500000)">
+            <g id="rubric-step-blank" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(56.521739, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-green" transform="translate(113.043478, 0.000000)" fill="#00A676">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(84.782609, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+        </g>
+        <g id="rubric-bar-3" transform="translate(29.000000, 63.000000)">
+            <g id="rubric-step-blank" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(28.260870, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(84.782609, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-green" transform="translate(56.521739, 0.000000)" fill="#00A676">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+            <g id="rubric-step-blank" transform="translate(113.043478, 0.000000)" fill="#E8E9EB">
+                <rect id="epa-button-3" x="0" y="0" width="27.3913043" height="10" rx="2"></rect>
+            </g>
+        </g>
+        <g id="teacher" transform="translate(13.000000, 30.000000)">
+            <g id="face-white" transform="translate(7.000000, 16.000000)" fill-rule="nonzero">
+                <path d="M30,0 L30,6.99 C30,13.14 26.3,18.43 21,20.74 C19.16,21.54 17.13,21.99 15,21.99 C12.87,21.99 10.84,21.54 9,20.74 C3.7,18.43 0,13.14 0,6.99 L0,0 L30,0 Z" id="Path" fill="#EAC6BB"></path>
+                <path d="M25.996,0 L25.996,6.99 C25.996,13.14 22.296,18.43 16.996,20.74 C15.744,21.285 14.398,21.651 12.998,21.84 C13.655,21.928 14.32,21.99 15,21.99 C17.13,21.99 19.16,21.54 21,20.74 C26.3,18.43 30,13.14 30,6.99 L30,0 L25.996,0 Z" id="Path" fill="#D3B1A9"></path>
+                <path d="M21,20.74 L21,33.99 L9,33.99 L9,20.74 C10.84,21.54 12.87,21.99 15,21.99 C17.13,21.99 19.16,21.54 21,20.74 Z" id="Path" fill="#EAC6BB"></path>
+            </g>
+            <g id="hair-cap" transform="translate(7.000000, 0.000000)" fill-rule="nonzero">
+                <g id="Group">
+                    <path d="M4.09090909,15.9285714 L0,20 L0,12.2142857 C0,5.46928571 5.48318182,0 12.2727273,0 L23.1818182,0 L23.1818182,5.42857143 C26.9454545,5.42857143 30,8.46857143 30,12.2142857 L30,20 L25.9090909,15.9285714 C25.9090909,15.9285714 20.8363636,18.6428571 15,18.6428571 C9.15,18.6428571 4.09090909,15.9285714 4.09090909,15.9285714 Z" id="Path" fill="#965353"></path>
+                    <path d="M23.125,9.5 C24.641625,9.5 25.875,10.7173571 25.875,12.2142857 L25.875,14.9285714 L30,19 L30,12.2142857 C30,8.46857143 26.92,5.42857143 23.125,5.42857143 L23.125,0 L19,0 L19,5.42857143 C19,7.67735714 20.846625,9.5 23.125,9.5 Z" id="Path" fill="#844747"></path>
+                </g>
+            </g>
+            <g id="body-coat" transform="translate(0.000000, 37.600000)">
+                <path d="M44,12.4 L44,19.4 C44,19.95 43.56,20.4 43,20.4 L1,20.4 C0.45,20.4 0,19.95 0,19.4 L0,12.4 C0,7.98 3.58,4.4 8,4.4 L15,4.4 L29,4.4 L36,4.4 C40.42,4.4 44,7.98 44,12.4 Z" id="Path" fill="#4A4A4A" fill-rule="nonzero"></path>
+                <path d="M22,1.84615385 C24.88,1.84615385 27.6,1.18461538 30,0 L30,4.92307692 L26.8,8 L22,6.46153846 L17.2,8 L14,4.92307692 L14,0 C16.4,1.18461538 19.12,1.84615385 22,1.84615385 Z" id="Path" fill="#6D7278" fill-rule="nonzero"></path>
+                <path d="M36,4.4 L31.996,4.4 C36.416,4.4 39.996,7.98 39.996,12.4 L39.996,19.4 C39.996,19.95 39.556,20.4 38.996,20.4 L43,20.4 C43.56,20.4 44,19.95 44,19.4 L44,12.4 C44,7.98 40.42,4.4 36,4.4 Z" id="Path" fill="#2D2D2A" fill-rule="nonzero"></path>
+                <circle id="Oval" fill="#6D7278" cx="22" cy="9.4" r="1"></circle>
+                <circle id="Oval" fill="#6D7278" cx="22" cy="13.4" r="1"></circle>
+                <circle id="Oval" fill="#6D7278" cx="22" cy="17.4" r="1"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
