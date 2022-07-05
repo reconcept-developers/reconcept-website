@@ -16,10 +16,12 @@ class ReconceptApolloClient {
   }
 
   // returns a promise
-  mutation(mutation, variables) {
-    return this.client.mutation({
+  mutate(mutation, variables) {
+    return this.client.mutate({
       mutation: mutation,
-      variables: variables
+      variables: {
+        input: variables
+      }
     })
   }
 

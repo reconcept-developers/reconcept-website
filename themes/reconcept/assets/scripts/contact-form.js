@@ -46,15 +46,18 @@ class ContactForm {
   submitContactForm(e) {
 
     let whichContactForm = e.target;
-    let serialized = `${$(whichContactForm).serialize()}&page_url=${encodeURIComponent(location.href)}`;
+    let formData = this.getFormData(whichContactForm);
+    formData.pageUrl = location.href;
 
-    this.sendMail();
-    // $.post("/scripts/contact_form.php", serialized, function () {
-    //   whichContactForm.classList.add("submitted");
-    //   whichContactForm
-    //     .querySelector("[js-contact-form-submit]")
-    //     .setAttribute("disabled", "disabled");
-    // });
+    this.sendMail(formData)
+    .then(r => {
+      whichContactForm.classList.add("submitted");
+      whichContactForm
+        .querySelector("[js-contact-form-submit]")
+        .setAttribute("disabled", "disabled");
+    }, e => {
+      console.error(e)
+    })
 
     // ads analytics
     gtag_report_conversion();
@@ -62,12 +65,34 @@ class ContactForm {
     return false;
   }
 
-  sendMail(){
-    this.apolloClient.mutation(SendMailMutation, {
-      subject: "Test subject",
-      body: "test body \n test newline",
-      emailAddresses: ["jurgen@reconcept.nl"]
+  getFormData(whichForm) {
+    return $(whichForm).serializeArray().reduce(function(obj, item) {
+      obj[item.name] = item.value;
+      return obj;
+    }, {});
+  }
+
+  sendMail(formData){
+    return this.apolloClient.mutate(SendMailMutation, {
+      subject: formData.subject,
+      body: this.getBody(formData),
+      emailAddresses: this.getEmailAddresses(formData)
     })
+  }
+
+  getEmailAddresses(formData) {
+    return formData.to_email.split(',').map(e => e.trim);
+  }
+
+  getBody(formData) {
+    return `
+      Naam: ${formData.name}
+      E-mail: ${formData.email}
+      Telefoon: ${formData.telephone}
+      Pagina op site: ${formData.pageUrl}
+
+      Overige opmerkingen: ${formData.description}
+    `
   }
 
 }
