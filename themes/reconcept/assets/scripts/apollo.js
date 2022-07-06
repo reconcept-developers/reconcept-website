@@ -4,7 +4,7 @@ import { ApolloClient } from '@apollo/client/core';
 class ReconceptApolloClient {
   constructor() {
     this.client = new ApolloClient({
-      uri: 'https://api.portfoliodemo.reconcept.nl/graphql',
+      uri: 'https://api.portfolio.reconcept.nl/graphql',
       cache: new InMemoryCache(),
     });
   }
