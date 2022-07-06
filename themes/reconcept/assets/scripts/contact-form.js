@@ -32,7 +32,6 @@ class ContactForm {
     });
 
     this.$form.on("change", (e) => {
-      console.log('change')
       this.onFormChange(e);
     });
   }
@@ -44,7 +43,6 @@ class ContactForm {
   }
 
   submitContactForm(e) {
-
     let whichContactForm = e.target;
     let formData = this.getFormData(whichContactForm);
     formData.pageUrl = location.href;
@@ -81,7 +79,7 @@ class ContactForm {
   }
 
   getEmailAddresses(formData) {
-    return formData.to_email.split(',').map(e => e.trim);
+    return formData.to_email.split(',').map(e => e.trim());
   }
 
   getBody(formData) {
