@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "graphql-tag": "^2.12.6",
     "jquery": "^3.5.1"
   },
   "scripts": {

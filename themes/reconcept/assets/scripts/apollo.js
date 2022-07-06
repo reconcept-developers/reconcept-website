@@ -1,4 +1,5 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
+import { ApolloClient } from '@apollo/client/core';
 
 class ReconceptApolloClient {
   constructor() {
