@@ -1,6 +1,3 @@
-import * as process from 'process';
-window['process'] = process;
-
 import $ from "jquery";
 import ContactForm from "./contact-form";
 import Cookies from "./cookies";
