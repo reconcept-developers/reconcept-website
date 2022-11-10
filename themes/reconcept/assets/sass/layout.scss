@@ -177,6 +177,13 @@ section {
   }
 }
 
+.secondary-information {
+  // border: 1px solid $c-gray-light;
+  background-color: $c-gray-light;
+  padding: 20px 0;
+  border-radius: $br;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
