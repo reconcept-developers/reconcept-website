@@ -8,70 +8,9 @@ info-box {
   padding: 15px;
   border-radius: $br;
 
-  p:last-child,
-  .form-row:last-child,
-  ol:last-child,
-  ul:last-child {
-    margin-bottom: 0;
-  }
-
-  &.info-box-flex {
-    display: flex;
-    align-items: center;
-  }
-
-  &.clickable {
-    transition: background-color 0.3s;
-    cursor: pointer;
-    &:hover {
-      color: white;
-      background-color: $col-brand-bg;
-    }
-  }
-
-  &.alert {
-    background-color: $col-alert-bg;
-    color: $col-alert-dark;
-    &.clickable:hover {
-      background-color: $col-alert;
-    }
-  }
-
   &.positive {
     background-color: $col-positive-bg;
     color: $col-positive-dark;
-    &.clickable:hover {
-      background-color: $col-positive;
-    }
   }
 
-  &.negative {
-    background-color: $col-negative-bg;
-    color: $col-negative-dark;
-    &.clickable:hover {
-      background-color: $col-negative;
-    }
-  }
-
-  &.info {
-    background-color: $col-brand-bg;
-    color: $col-brand-dark;
-    &.clickable:hover {
-      background-color: $col-brand;
-    }
-  }
-
-  &.inactive {
-    background-color: $col-bg-darker;
-    color: $col-bg;
-  }
-
-  button {
-    margin-bottom: 0;
-  }
-
-  fa-icon {
-    font-size: 1.2em;
-    padding-right: 5px;
-  }
 }

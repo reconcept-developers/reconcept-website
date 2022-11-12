@@ -39,7 +39,6 @@ a.button {
   @include defaultColors();
   @include basicColors();
   @include hoverColors();
-  @include selectedColors();
 
   // @Todo distinguish between actually disabled and read-only style buttons (e.g. form selected option display)
   &[disabled],

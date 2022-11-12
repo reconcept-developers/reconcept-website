@@ -8,9 +8,12 @@ img.avatar {
   height: 50px;
 }
 
-img.reconcept-logo {
+.reconcept-logo {
   height: 1em;
   vertical-align: text-bottom;
+  * {
+    fill: $col-brand;
+  }
 }
 
 img.shadow {

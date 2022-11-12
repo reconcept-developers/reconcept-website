@@ -104,10 +104,12 @@ span {
   &.highlight {
 
     display: inline;
-    padding: .04em .3em;
+    // padding: .04em .3em;
     margin-top: -2px;
     margin-bottom: -2px;
     border-radius: 2px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
 
     &.highlight-margin {
       margin: 5px;
@@ -119,43 +121,43 @@ span {
     }
 
     &.gaia {
-      color: white;
-      background-color: $col-gaia;
+      // color: white;
+      border-bottom-color: $col-gaia;
     }
 
     &.blue {
-      color: white;
-      background-color: $c-blue;
+      // color: white;
+      border-bottom-color: $c-blue;
     }
 
     &.bright-blue {
-      color: white;
-      background-color: $c-blue-bright;
+      // color: white;
+      border-bottom-color: $c-blue-bright;
     }
 
     &.green {
-      color: white;
-      background-color: $c-green;
+      // color: white;
+      border-bottom-color: $c-green;
     }
 
     &.yellow {
-      color: white;
-      background-color: $c-yellow;
+      // color: white;
+      border-bottom-color: $c-yellow;
     }
 
     &.orange {
-      color: white;
-      background-color: #f60;
+      // color: white;
+      border-bottom-color: #f60;
     }
 
     &.red {
-      color: white;
-      background-color: $c-red;
+      // color: white;
+      border-bottom-color: $c-red;
     }
 
     &.purple {
-      color: white;
-      background-color: $col-purple;
+      // color: white;
+      border-bottom-color: $col-purple;
     }
   }
 }

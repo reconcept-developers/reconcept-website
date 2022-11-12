@@ -1,83 +1,95 @@
-// gray
-$c-gray-darkest: #2d2d2a;
-$c-gray-darker: #4a4a4a;
-$c-gray-dark: #5d6c7f;
-$c-gray: #798ca3;
-$c-gray-light: #e8e9eb;
-$c-gray-lightest: #fafbfb;
+$c-gray-50: #F8FAFC;
+$c-gray-200: #E2E8F0;
+$c-gray-300: #CBD5E1;
+
+$c-blue-100: #DBEAFE;
+$c-blue-dark-900: #05003f;
+$c-blue-700: #1D4ED8;
+
+$c-green-100: #D1FAE5;
+$c-green-500: #10B981;
+$c-green-700: #047857;
+// $c-green-600: #059669;
+
+$c-yellow-500: #EAB308;
+
+// // gray
+// $c-gray-darkest: #2d2d2a;
+// $c-gray-darker: #4a4a4a;
+// $c-gray-dark: #5d6c7f;
+// $c-gray: #798ca3;
+// $c-gray-light: #e8e9eb;
+// $c-gray-lightest: #fafbfb;
 
 // blue bright
 $c-blue-bright: #27baff;
 
 // blue
-$c-blue-darker: #0b4f6c;
-$c-blue-dark: #33658a;
-$c-blue: #007bc0;
-$c-blue-lightest: #ecf5f9;
-// $c-blue-subtle: #e1e7ea;
-$c-blue-subtle: #F8F9FD;
+// $c-blue-darker: #0b4f6c;
+// $c-blue-dark: #33658a;
+$c-blue: $c-blue-700;
+// $c-blue-lightest: #ecf5f9;
+// // $c-blue-subtle: #e1e7ea;
+// $c-blue-subtle: #F8F9FD;
 
-// green
-$c-green-dark: #007c58;
-$c-green: #00a676;
-$c-green-lightest: #d4f5eb;
+// // green
+// $c-green-dark: #007c58;
+$c-green: $c-green-500;
+// $c-green-lightest: #d4f5eb;
 
-// yellow
-$c-yellow-dark: #a07500;
-$c-yellow: #fcba04;
-$c-yellow-lightest: #fff3d3;
+// // yellow
+// $c-yellow-dark: #a07500;
+$c-yellow: $c-yellow-500;
+// $c-yellow-lightest: #fff3d3;
 
-// red
-$c-red-dark: #ad3b1f;
+// // red
+// $c-red-dark: #ad3b1f;
 $c-red: #f06543;
-$c-red-lightest: #fce3dd;
+// $c-red-lightest: #fce3dd;
 
-// accent
+// // accent
 $col-primary: $c-blue-bright;
 $col-accent: $c-blue-bright;
 $col-gaia: #00bcbd;
 $col-purple: #54288b;
 
-// brand
-$col-brand-dark: $c-blue-dark;
-$col-brand: $c-blue;
-$col-brand-bg: $c-blue-lightest;
-$col-active: $c-blue;
+// // brand
+// $col-brand-dark: $c-blue-dark;
+$col-brand: $c-blue-700;
+$col-brand-bg: $c-blue-100;
+$col-active: $c-blue-700;
 
-// positive
-$col-positive-dark: $c-green-dark;
-$col-positive: $c-green;
-$col-positive-bg: $c-green-lightest;
+// // positive
+$col-positive-dark: $c-green-700;
+$col-positive: $c-green-500;
+$col-positive-bg: $c-green-100;
 
-// alert
-$col-alert-dark: $c-yellow-dark;
-$col-alert: $c-yellow;
-$col-alert-bg: $c-yellow-lightest;
+// // alert
+// $col-alert-dark: $c-yellow-dark;
+// $col-alert: $c-yellow;
+// $col-alert-bg: $c-yellow-lightest;
 
-// progress is a separate variable, since in the future it may change from the alert color
+// // progress is a separate variable, since in the future it may change from the alert color
 $col-progress: $c-yellow;
 
-// negative
-$col-negative-dark: $c-red-dark;
+// // negative
+// $col-negative-dark: $c-red-dark;
 $col-negative: $c-red;
-$col-negative-bg: $c-red-lightest;
+// $col-negative-bg: $c-red-lightest;
 
-// grays
-$col-bg-darkest: $c-gray-darkest;
-$col-bg-darker: $c-gray-darker;
-$col-ui-bg: $c-gray-light;
-$col-bg: $c-gray-lightest;
-$col-neutral: $c-gray;
-$col-lines: $c-gray-light;
-$col-bg-subtle: $c-blue-subtle;
+// // grays
+// $col-bg-darkest: $c-gray-darkest;
+$col-bg-darker: $c-blue-dark-900;
+// $col-neutral: $c-gray;
+$col-bg-subtle: $c-gray-50;
+$col-ui-bg: $c-gray-50;
+$col-lines: $c-gray-200;
+$col-bg: $c-gray-300;
 
 // practical
-$col-text-primary: $c-gray-darkest;
-$col-text-secondary: $c-gray-dark;
-$col-text-muted: rgba(black, 0.5);
-$col-text-light: $c-gray-light;
-$col-text-light-muted: rgba(white, .5);
-
+$col-text-primary: $c-blue-dark-900;
+$col-text-secondary: rgba($c-blue-dark-900, .75);
+$col-text-muted: rgba($c-blue-dark-900, .5);
 
 $breakpoint-small: 540px;
 $breakpoint-small-max: 539px;
@@ -92,5 +104,5 @@ $button-spacing: 10px;
 $input-height: $button-height;
 $br: 2px;
 
-$font-size-default: 17px;
-$font-size-small: 16px;
+$font-size-default: 16px;
+$font-size-small: 15px;

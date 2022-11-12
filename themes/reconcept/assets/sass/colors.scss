@@ -97,7 +97,7 @@ $colors-list-vars: (
 @mixin basicColors() {
   // apply default color (no color class)
   &.basic {
-    @include color-basic($col-ui-bg, $col-text-secondary);
+    @include color-basic($col-lines, $col-text-secondary);
   }
 
   //use the position of colors-list to grab the equivalent color value
