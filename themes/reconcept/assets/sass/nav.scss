@@ -80,6 +80,13 @@ nav.nav-header {
           padding: 20px;
           padding-left: 30px;
           border-radius: $br;
+
+          .green.label {
+            padding: 2px 3px;
+            background: $c-green;
+            color: white;
+            border-radius: 2px;
+          }
         }
 
         &.active a.nav-link, a.nav-link:hover {
