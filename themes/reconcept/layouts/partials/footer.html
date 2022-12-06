@@ -31,7 +31,12 @@
           Werken bij Reconcept 😃
         </b>
         <ul>
-          {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "vacancies") -}}
+          <li>
+            <a href="/vacancies/general">
+              Je toekomst bij Reconcept
+            </a>
+          </li>
+          {{- partial "footer-nav-items" .Site.Menus.vacancies -}}
         </ul>
       </div>
       
