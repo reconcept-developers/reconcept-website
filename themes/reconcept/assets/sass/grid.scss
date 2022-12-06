@@ -122,9 +122,51 @@ $gutter: 30px;
     min-height: 200px;
     max-width: 300px;
     max-height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '\2665';
+      display: block;
+      position: absolute;
+      color: white;
+      font-size: 50px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      height: 100%;
+      opacity: 0;
+    }
+    &:hover::after {
+      animation: heart-grow 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
   }
   img {
     max-width: 500px;
     max-height: 500px;
+  }
+}
+
+@keyframes heart-grow {
+  0% {
+    transform: scale3d(0,0,0);
+    opacity: 0;
+  }
+  
+  40% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  
+  60% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scale3d(0,0,0);
+    opacity: 0;
   }
 }
