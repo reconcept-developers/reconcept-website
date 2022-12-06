@@ -93,10 +93,13 @@ section {
       left: 0;
       top: 0;
       right: 0;
+      height: 500px;
       max-height: 500px;
-      img {
-        width: 100%;
-      }
+      background-position: center -200px;
+      background-size: cover;
+      // img {
+      //   width: 100%;
+      // }
     }
 
     .content {

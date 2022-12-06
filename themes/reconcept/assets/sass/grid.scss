@@ -93,8 +93,38 @@ $gutter: 30px;
   }
 }
 
+.hidden-med {
+  @media only screen and (max-width: $breakpoint-med-max) {
+    display: none !important;
+  }
+}
+
 .hidden-large {
   @media only screen and (min-width: $breakpoint-large) {
     display: none !important;
+  }
+}
+
+// photo grid
+.photo-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .photo {
+    width: 25vw;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  img {
+    max-width: 500px;
+    max-height: 500px;
   }
 }

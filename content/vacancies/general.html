@@ -5,8 +5,12 @@ featured_image: "photos/team3.jpg"
 label: "video"
 menu:
   main:
+    identifier: "vacancies"
+    weight: 90
+<!-- menu:
+  main:
     parent: "vacancies"
-    weight: 1
+    weight: 1 -->
 ---
 
 
@@ -14,15 +18,13 @@ menu:
 
   <section class="hero">
 
-      <div class="background">
-        <img src="/photos/team3-hi.jpg"/>
+      <div class="background" style="background-image: url(/photos/team6-hi.jpg)">
       </div>
 
       <div class="content">
         <div class="content-text">
           <h1>
-            Maak je <span class="blue highlight">toekomst</span> bij Reconcept
-            <!-- Bij Reconcept maak jij de toekomst van <span class="blue highlight">medisch opleiden in de praktijk</span>  -->
+            Je <span class="blue highlight">toekomst</span> bij Reconcept
           </h1>
           <p class="quote">
             Om een platform te maken waar een groot deel van de medische sector in Nederland
@@ -80,8 +82,34 @@ menu:
     {{<available-vacancies>}}
   </section>
 
+  <section class="center">
+    <div class="row">
+      <div class="col">
+        <h2>
+          Fotomuur
+        </h2>
+
+        <div class="photo-grid">
+
+          <div class="photo" style="background-image: url(/photos/team8.jpg)"></div>
+          <div class="photo" style="background-image: url(/photos/team9.jpg)"></div>
+          <div class="photo" style="background-image: url(/photos/team5.jpg)"></div>
+          <div class="photo" style="background-image: url(/photos/klim1.jpg)"></div>
+          <div class="photo" style="background-image: url(/photos/team4.jpg)"></div>
+          <div class="photo" style="background-image: url(/photos/team6.jpg)"></div>
+          <!-- <div class="photo" style="background-image: url(/photos/team3.jpg)"></div> -->
+          <!-- <div class="photo hidden-med" style="background-image: url(/photos/team2.jpg)"></div> -->
+          <!-- <div class="photo" style="background-image: url(/photos/team.jpg)"></div> -->
+         
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   {{< vacancy-opening-sections >}}
   {{< vacancy-challenges >}}
+
 
   <section class="spaced">
     <div class="alternating row">
