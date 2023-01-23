@@ -1,0 +1,46 @@
+
+<form id="contactForm" name="contactForm" action="" class="contact-form" js-contact-form>
+        
+  <div class="info-box positive show-submitted">
+    <span class="fal fa-paper-plane"></span> 
+    <span>Bedankt voor je aanvraag. We nemen zo snel mogelijk contact met je op een demo in te plannen!</span>
+  </div>
+  
+  <div class="hide-submitted">
+    <div class="form-row">
+      <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
+      <input type="hidden" name="subject" placeholder="Onderwerp" value="Demo-aanvraag via website: {{ .Page.Name }}"/>
+      <label for="name">
+        Je naam*
+      </label>
+      <input type="text" name="name" placeholder="Je naam" required/>
+    </div>
+    <div class="form-row">
+      <label for="name">
+        Je e-mailadres*
+      </label>
+        <input type="email" name="email" placeholder="Je e-mailadres" required/>
+    </div>
+    <div class="form-row">
+      <label for="name">
+        Je telefoonnummer
+      </label>
+      <input type="tel" name="telephone" placeholder="Je telefoonnummer"/>
+    </div>
+    <div class="form-row">
+      <label for="name">
+        Overige opmerkingen
+      </label>
+      <textarea name="description" placeholder="Overige opmerkingen"></textarea>
+    </div>
+    <div class="form-row">
+      <button type="submit" class="bright-blue button" js-contact-form-submit>
+        <span>
+          {{ default "Aanvragen" (.Get 1) }}
+        </span>
+        <span class="fal fa-paper-plane"></span> 
+      </button>
+    </div>
+  </div>
+
+</form>
