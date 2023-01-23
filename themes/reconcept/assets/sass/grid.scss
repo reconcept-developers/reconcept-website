@@ -1,4 +1,5 @@
 // SIMPLE GRID - SASS/SCSS
+$vertical-spacing: 90px;
 
 // universal
 html,
@@ -41,6 +42,31 @@ $gutter: 30px;
   }
 }
 
+// new layout style
+section.rcp-section {
+
+  padding: $vertical-spacing 0;
+
+  &.vertical-spacing {
+    margin-bottom: $vertical-spacing;
+  }
+
+  .rcp-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $gutter;
+    @media only screen and (min-width: $breakpoint-small) {
+      width: 80vw;
+    }
+  
+    @media only screen and (min-width: $breakpoint-large) {
+      width: 75vw;
+      max-width: $breakpoint-large;
+    }
+    
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -51,18 +77,19 @@ $gutter: 30px;
     align-items: center;
   }
 
-  // &:not(:last-child){
-  //   margin-bottom: $gutter;
-  // }
-
   .col {
     flex: 1 1;
     padding: 0 .5*$gutter;
-    margin-top: .5*$gutter;
-    margin-bottom: .5*$gutter;
   }
   .col.min-width {
     flex-basis: 300px;
+  }
+  .col.full-height {
+    margin-top: -$vertical-spacing;
+    margin-bottom: -$vertical-spacing;
+
+    display: flex;
+    align-items: center;
   }
 
   .col.flex-0 {
@@ -81,6 +108,10 @@ $gutter: 30px;
       flex-basis: 90%;
       &:not(:last-child){
         margin-bottom: $gutter;
+      }
+      &.full-height {
+        margin-top: 0;
+        // margin-bottom: 0;
       }
     }
   }
