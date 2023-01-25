@@ -67,6 +67,7 @@ section.rcp-section {
   }
 }
 
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -75,6 +76,10 @@ section.rcp-section {
 
   &.v-center {
     align-items: center;
+  }
+
+  &.vertical-spacing {
+    margin-bottom: $gutter;
   }
 
   .col {

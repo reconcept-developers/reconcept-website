@@ -73,6 +73,7 @@ section {
   }
   
   &.black, &.dark, &.blue, &.green, &.yellow, &.bright-blue {
+
     color: white;
     p {
       color: rgba(white, .9);
