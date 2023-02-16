@@ -1,5 +1,6 @@
 baseURL = "https://reconcept.nl/"
-languageCode = "en-us"
+languageCode = "nl-nl"
+defaultContentLanguage = "nl"
 title = "Reconcept"
 theme = "reconcept"
 [params]
