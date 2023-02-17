@@ -8,6 +8,18 @@
             
             <h1>{{ .Title }}</h1>
 
+            {{ range .Pages }}
+              <a class="clickable padded spaced vertical tile" href="{{.Permalink}}">
+
+                <div class="label">
+                  {{.Title}}
+                </div>
+                <div class="description">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </a>
+            {{ end }}
+
             {{ range .Page.Menus }}
 
               {{ range .Children }}

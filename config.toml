@@ -13,3 +13,6 @@ theme = "reconcept"
   [[module.mounts]]
     source = "node_modules/jquery-lite/dist"
     target = "static/jquery-lite"
+
+[permalinks]
+  posts = '/:year/:month/:title/'
