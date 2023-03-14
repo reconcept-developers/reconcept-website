@@ -1,7 +1,7 @@
 ---
 title: "Vrijheid waar het kan, gevalideerd waar het moet"
 description: "Over de balans tussen vrijheid en validatie. Vrijheid zorgt voor initiatief vanuit studenten, validatie zorgt voor zekerheid."
-date: "2023-03-06"
+date: "2023-03-05"
 author: "Mariëlle Rodenboog"
 featured_image: "blog/blog3.jpg"
 ---
