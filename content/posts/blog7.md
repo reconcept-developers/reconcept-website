@@ -1,7 +1,7 @@
 ---
 title: "Waarom moeilijk doen als het makkelijk kan"
 description: "Reconcept ondersteunt bij opleiden en maakt zo het leven van student en docent in het hoger onderwijs makkelijker."
-date: "2023-04-31"
+date: "2023-03-31"
 author: "Mariëlle Rodenboog"
 featured_image: "blog/blog7.jpg"
 ---
