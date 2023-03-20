@@ -26,7 +26,7 @@ echo "Removing existing files"
 rm -rf public/*
 
 echo "Generating site"
-hugo --config $CONFIG_FILENAME
+hugo --config $CONFIG_FILENAME --buildFuture
 
 echo "$BUCKET ---[Copying package to server]---"
 aws s3 sync ./public s3://$BUCKET
