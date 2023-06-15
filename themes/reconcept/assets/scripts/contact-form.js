@@ -58,7 +58,7 @@ class ContactForm {
     })
 
     // ads analytics
-    gtag_report_conversion();
+    // gtag_report_conversion();
 
     return false;
   }
