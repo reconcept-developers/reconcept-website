@@ -65,6 +65,22 @@ section.rcp-section {
     }
     
   }
+
+  &.rcp-section-hero {
+    padding: 0;
+    // position: relative;
+    // min-height: 500px;
+    // padding: $gutter;
+    // margin-left: -$gutter;
+    // margin-right: -$gutter;
+
+    .background {
+      height: 500px;
+      max-height: 500px;
+      background-position: center bottom;
+      background-size: cover;
+    }
+  }
 }
 
 

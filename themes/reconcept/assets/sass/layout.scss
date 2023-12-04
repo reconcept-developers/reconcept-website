@@ -94,44 +94,6 @@ section {
     align-items: center;
   }
 
-  &.hero {
-    position: relative;
-    min-height: 500px;
-    padding: $gutter;
-    margin-left: -$gutter;
-    margin-right: -$gutter;
-
-    .background {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      height: 500px;
-      max-height: 500px;
-      background-position: center -200px;
-      background-size: cover;
-      // img {
-      //   width: 100%;
-      // }
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      background: white;
-      padding: $vertical-padding; 
-      margin-top: 30vw;
-
-      .content-text {
-        margin: 0 auto;
-        max-width: 800px;
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-  }
-
   @media only screen and (min-width: $breakpoint-med) {
     // alternate the order of columns for each row
     // for each other row, put the first column last

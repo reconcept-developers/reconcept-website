@@ -103,6 +103,11 @@ nav.nav-header {
       }
     }
   }
+
+  li.nav-item.no-shrink {
+
+      flex: 0 0 auto;
+  }
   
 }
 
@@ -194,6 +199,7 @@ nav.nav-header {
         margin-left: 20px;
   
         li.nav-item {
+
           a.nav-link {
             display: flex;
             align-items: center;
