@@ -8,7 +8,8 @@
           Product
         </b>
         <ul>
-          {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "product") -}}
+          <!-- {{- partial "footer-nav-sub-items" (dict "context" . "submenu" "product") -}} -->
+          {{- partial "footer-nav-items" .Site.Menus.productfooter -}}
         </ul>
 
         <b>
