@@ -1,0 +1,59 @@
+
+<form id="contactForm" name="contactForm" action="" class="contact-form" js-contact-form>
+        
+  <div class="info-box positive show-submitted">
+    <span class="fal fa-paper-plane"></span> 
+    <span>Bedankt voor het aanvragen. We nemen zo snel mogelijk contact met je op!</span>
+  </div>
+  
+  <div class="hide-submitted">
+    <div class="row vertical-spacing">
+      <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
+      <input type="hidden" name="subject" placeholder="Onderwerp" value="Contactformulier: {{ .Page.Name }}"/>
+      <div class="col">
+        <input type="text" name="name" placeholder="Je naam" required/>
+      </div>
+      <div class="col">
+        <input type="email" name="email" placeholder="Je e-mailadres" required/>
+      </div>
+      <div class="col">
+        <button type="submit" class="bright-blue button full-width" js-contact-form-submit>
+          {{ default "Verzenden" (.Get 1) }}
+        </button>
+      </div>
+    </div>
+
+    <div class="additional-fields">
+      <div class="row vertical-spacing">
+        <div class="col left">
+          <h4>Waar heb je interesse in?</h4>
+          <div>
+            <input type="radio" id="mvo" name="selection" value="MVO" required />
+            <label for="mvo">Medische Vervolgopleidingen</label>
+          </div>
+        
+          <div>
+            <input type="radio" id="vvo" name="selection" value="VVO" required />
+            <label for="vvo">Verpleegkundige Vervolg- en Medisch Ondersteunende Opleidingen</label>
+          </div>
+        
+          <div>
+            <input type="radio" id="sgk" name="selection" value="SGK" required />
+            <label for="sgk">Sociale Geneeskunde</label>
+          </div>
+        </div>
+      </div>
+      <div class="row vertical-spacing">
+        <div class="col">
+          <input type="tel" name="telephone" placeholder="Je telefoonnummer (optioneel)"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <textarea name="description" placeholder="Heb je nog opmerkingen? (optioneel)"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

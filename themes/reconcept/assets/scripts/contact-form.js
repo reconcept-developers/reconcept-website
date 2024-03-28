@@ -84,12 +84,14 @@ class ContactForm {
 
   getBody(formData) {
     return `
-      Naam: ${formData.name}
-      E-mail: ${formData.email}
-      Telefoon: ${formData.telephone}
-      Pagina op site: ${formData.pageUrl}
-
-      Overige opmerkingen: ${formData.description}
+      Naam: ${formData.name} <br/>
+      E-mail: ${formData.email} <br/>
+      Telefoon: ${formData.telephone} <br/>
+      Pagina op site: ${formData.pageUrl} <br/>
+      <br/>
+      Overige opmerkingen: ${formData.description} <br/>
+      
+      Keuze: ${formData.selection} <br/>
     `
   }
 
