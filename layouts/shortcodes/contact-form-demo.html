@@ -8,8 +8,8 @@
   
   <div class="hide-submitted">
     <div class="form-row">
-      <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "info@reconcept.nl" (.Get 0) }}"/>
-      <input type="hidden" name="subject" placeholder="Onderwerp" value="Demo-aanvraag via website: {{ .Page.Name }}"/>
+      <input type="hidden" name="to_email" placeholder="Naar e-mailadres" value="{{ default "sales+webform@reconcept.nl" (.Get 0) }}"/>
+      <input type="hidden" name="subject" placeholder="Onderwerp" value="Demo-aanvraag via website: {{ .Page.Name }} <due today> <assign joost@reconcept.nl> <tag webform>"/>
       <label for="name">
         Je naam*
       </label>
@@ -26,6 +26,23 @@
         Je telefoonnummer
       </label>
       <input type="tel" name="telephone" placeholder="Je telefoonnummer"/>
+    </div>
+    <div class="form-row">
+      <label>Waar heb je interesse in?</label>
+      <div>
+        <input type="radio" id="portfolio" name="selection" value="Portfolio" required />
+        <label for="portfolio">Reconcept Portfolio</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="kwaliteitsdashboard" name="selection" value="Kwaliteitsdashboard" required />
+        <label for="kwaliteitsdashboard">Reconcept Kwaliteitsdashboard</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="beide" name="selection" value="Beide" required />
+        <label for="beide">Beide</label>
+      </div>
     </div>
     <div class="form-row">
       <label for="name">
