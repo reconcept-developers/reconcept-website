@@ -92,6 +92,7 @@ class ContactForm {
       Overige opmerkingen: ${formData.description} <br/>
       
       Keuze: ${formData.selection} <br/>
+      Stemt in met privacybeleid: ${formData.agree} <br/>
     `
   }
 
