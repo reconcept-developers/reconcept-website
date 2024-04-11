@@ -18,8 +18,10 @@
   <meta content="{{ .Permalink }}" property="og:url" />
   <meta content="{{ .Description }}" property="og:description" />
   <meta content="{{ .Site.BaseURL }}{{ if isset .Params "featured_image" }}{{ .Params.featured_image }}{{ else }}{{ .Site.Param "featured_image" }}{{ end }}" property="og:image"/>
+  {{ if .Params.noindex }} <meta name="robots" content="noindex" /> {{ end }}
   
   {{ $script := resources.Get "scripts/main.js" }}
+  
   <!-- 
     note: disabled minify because somehow it messed up the gql tag
     {{ $built := $script | js.Build "main.js" | minify }} -->
