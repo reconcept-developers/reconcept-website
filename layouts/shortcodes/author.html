@@ -1,6 +1,8 @@
 
 <div class="author">
+  {{- if .Get 2 -}}
   <img class="avatar" src="{{ .Get 2 }}"/>
+  {{- end -}}
   <div class="labels">
     <div class="name">
       {{ .Get 0 }}
