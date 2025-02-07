@@ -98,3 +98,41 @@ form.show-additional-fields {
     margin-bottom: 10px;
   }
 }
+
+// Mailblue style overwrites
+
+form._form._inline-form {
+  margin-top: 0 !important;
+  width: 100% !important;
+
+  ._form-content {
+
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px;
+
+    ._form_element {
+      font-size: $font-size-default !important;
+      margin: 0 !important;
+      ._form-label {
+        font-size: $font-size-default !important;
+        font-weight: 600 !important;
+        margin-bottom: 10px !important;
+      }
+
+      ._field-wrapper {
+        input {
+          width: 100% !important;
+          max-width: 500px !important;
+        }
+      }
+    }
+
+    ._button-wrapper {
+      margin: 0 !important;
+      button {
+        font-size: $font-size-default !important;
+      }
+    }
+  }
+}

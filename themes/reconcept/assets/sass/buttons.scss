@@ -19,7 +19,8 @@ button {
 }
 
 button.button,
-a.button {
+a.button,
+._button-wrapper._inline-style button._submit { //overwrite mailblue style
   display: inline-flex;
   align-items: center;
   justify-content: center;
