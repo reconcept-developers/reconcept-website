@@ -108,12 +108,14 @@ form._form._inline-form {
   ._form-content {
 
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
     gap: 15px;
 
     ._form_element {
       font-size: $font-size-default !important;
       margin: 0 !important;
+      min-width: 380px !important;
       ._form-label {
         font-size: $font-size-default !important;
         font-weight: 600 !important;
@@ -129,6 +131,7 @@ form._form._inline-form {
     }
 
     ._button-wrapper {
+      width: 100% !important; //to enforce wrap
       margin: 0 !important;
       button {
         font-size: $font-size-default !important;
