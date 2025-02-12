@@ -108,3 +108,10 @@ img.vw-100 {
     margin: 0;
   }
 }
+
+.img-with-label {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
