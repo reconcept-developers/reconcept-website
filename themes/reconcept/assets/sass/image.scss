@@ -51,6 +51,7 @@ img.max-width {
 }
 
 img.logo, img.store-logo {
+  width: 70%;
   transition: filter 2s;
   filter: grayscale(1);
   &:hover {
