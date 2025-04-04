@@ -55,6 +55,7 @@ class ContactForm {
         .setAttribute("disabled", "disabled");
     }, e => {
       console.error(e)
+      whichContactForm.classList.add("submitted-error");
     })
 
     // ads analytics
@@ -75,6 +76,14 @@ class ContactForm {
       subject: formData.subject,
       body: this.getBody(formData),
       emailAddresses: this.getEmailAddresses(formData)
+    })
+    .then(r => {
+      if(r?.data?.sendMailToReconcept?.errors?.length){
+        throw "Error"
+      }
+      
+      return r;
+      
     })
   }
 
