@@ -71,6 +71,13 @@ section {
     // background-color: $col-lines;
     background-color: $col-bg-subtle;
   }
+  &.aandacht-voor-anios {
+    background-color: #f7c59f;
+    color: #990022;
+    p, ul, ol, li, h1, h2, h3, h4 {
+      color: #990022;
+    }
+  }
   
   &.black, &.dark, &.blue, &.green, &.yellow, &.bright-blue {
 
