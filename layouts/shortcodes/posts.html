@@ -1,0 +1,19 @@
+
+<div class="tile-container">
+
+{{ range (where site.RegularPages "Section" "posts") }}
+  
+<a class="tile clickable padded" href="{{ .Permalink }}">
+  <div class="tile-content">
+    <div class="label">
+      {{ .Title }}
+    </div>
+    <div class="description">
+      {{ .Description }}
+    </div>
+ </div>
+</a>
+
+{{ end }}
+
+</div>
