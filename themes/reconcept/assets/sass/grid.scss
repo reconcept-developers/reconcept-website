@@ -120,6 +120,19 @@ section.rcp-section {
     }
   }
 
+  .col.step-number {
+    background: $col-brand;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+
 }
 
 @media only screen and (max-width: $breakpoint-med-max) {
