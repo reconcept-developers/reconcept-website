@@ -3,7 +3,7 @@ title: "Reconcept lanceert initiatief 'Aandacht voor Anios'"
 description: "Aandacht voor Anios richt zich op laatstejaars geneeskundestudenten en anios om hen te voorzien van praktische tips en waardevolle informatie."
 date: "2025-05-01"
 author: "Daan Veneboer"
-featured_image: "blog/ava.png"
+featured_image: "/blog/ava.png"
 ---
 
 Goede zorg begint bij goede begeleiding van zorgprofessionals. Daarom werkt Reconcept dagelijks aan het verbeteren van het EPA-portfolio voor medische vervolgopleidingen. Waar een AIOS echter de structuur van een opleiding heeft, zijn er voor een anios soms minder handvatten beschikbaar. 

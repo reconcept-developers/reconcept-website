@@ -6,11 +6,6 @@
         <h1>
           {{ .Title }}
         </h1>
-        <p class="blog-date">
-          {{ .Date | time.Format ":date_long" }}
-          -
-          door {{ .Params.author }}
-        </p>
         <p class="blog-description">
           {{ .Description }}
         </p>

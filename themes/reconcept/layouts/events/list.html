@@ -1,0 +1,50 @@
+{{ define "main" }}
+    {{ .Content }}
+    <div class="container">
+      <section class="spaced">
+        <div class="row">
+    
+          <div class="col">
+            
+            <h1>{{ .Title }}</h1>
+
+            {{ range .Pages }}
+              <a class="clickable padded spaced vertical tile" href="{{.Permalink}}">
+
+                <div class="label">
+                  {{.Title}}
+                </div>
+                <div class="description">
+                  {{ .Date | time.Format ":date_long" }}
+                </div>
+              </a>
+            {{ end }}
+
+            {{ range .Page.Menus }}
+
+              {{ range .Children }}
+                
+                <a class="clickable padded spaced vertical tile" href="{{ .URL }}">
+
+                  <div class="label">
+                    {{ if .Page.Params.Menutitle }} 
+                    {{ .Page.Params.Menutitle }} 
+                    {{ else }} 
+                    {{ .Name }}
+                    {{ end }}
+                  </div>
+                  <div class="description">
+                    {{ .Page.Description }}
+                  </div>
+                </a>
+
+              {{ end }}
+
+            {{ end }}
+
+          </div>
+    
+        </div>
+      </section>
+    </div>
+{{ end }}

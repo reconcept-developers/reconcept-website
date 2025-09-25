@@ -1,0 +1,41 @@
+
+<div class="tile-container">
+
+{{ range (where site.RegularPages "Section" "events") }}
+  
+<!-- <a class="tile clickable padded" href="{{ .Permalink }}">
+  <div class="tile-content">
+    <div class="label">
+      {{ .Title }}
+    </div>
+    <div class="description">
+      {{ .Description }}
+    </div>
+ </div>
+</a> -->
+
+
+      <div class="media-tile">
+        <div class="featured-image" style="background-image: url({{ .Params.featured_image }})"></div>
+        <div class="tile-content">
+          <h3>
+            {{ .Title }}
+          </h3>
+          <p>
+            {{ .Description }}
+          </p>
+
+          <a class="blue button" href="{{ .Permalink }}">
+            <span>Lees meer</span>
+            <span class="fal fa-angle-right"></span>
+          </a>
+        </div>
+      </div>
+      
+
+
+
+{{ end }}
+
+
+</div>
