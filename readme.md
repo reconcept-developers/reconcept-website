@@ -24,8 +24,8 @@ Layout and styling are taken care of in a 'theme' that can be found in `/themes/
 
 ## Deploying site
 
-To deploy the site, simply run:
+To deploy the site, push all changes to master and run:
 
-`npm run deploy`
+`./publish.sh`
 
-Your ssh key will need access to the server.
+The site will be deployed as a static site on github. It will also trigger an invalidation in CloudFront, so you will need a personal AWS API key with the proper permissions to do this.
