@@ -242,3 +242,11 @@ img.footer-logo {
   width: 180px;
   border: 2px solid white;
 }
+
+.show-if-only {
+  display: none;
+}
+
+.show-if-only:first-child {
+  display: block;
+}

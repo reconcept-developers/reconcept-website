@@ -3,17 +3,7 @@
 
 {{ range (where site.RegularPages "Section" "events") }}
   
-<!-- <a class="tile clickable padded" href="{{ .Permalink }}">
-  <div class="tile-content">
-    <div class="label">
-      {{ .Title }}
-    </div>
-    <div class="description">
-      {{ .Description }}
-    </div>
- </div>
-</a> -->
-
+  {{ if (time .Params.date).After now }}
 
       <div class="media-tile">
         <div class="featured-image" style="background-image: url({{ .Params.featured_image }})"></div>
@@ -31,11 +21,13 @@
           </a>
         </div>
       </div>
+
       
-
-
-
-{{ end }}
-
+      {{ end }}
+      {{ end }}
+      
+      <div class="show-if-only">
+        We hebben momenteel niets op de planning staan.
+      </div>
 
 </div>
